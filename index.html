@@ -340,6 +340,11 @@ details .a .tbl{margin:10px 0}
 .totop:hover{background:var(--ink);color:var(--paper)}
 .inservice-on .totop{border-color:var(--green);color:var(--green)}
 .inservice-on .totop:hover{background:var(--green);color:var(--paper)}
+.topr{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.themebtn{font:inherit;font-size:.85rem;display:inline-flex;align-items:center;gap:6px;padding:6px 12px;border-radius:999px;border:1px solid var(--line);background:var(--panel);color:var(--ink);cursor:pointer}
+.themebtn:hover{border-color:var(--ink)}
+.themebtn .ic{width:14px;height:14px;border-radius:50%;background:var(--ink);box-shadow:inset -4px -2px 0 0 var(--panel)}
+:root[data-theme="dark"] .themebtn .ic,:root:not([data-theme="light"]) .themebtn.isdark .ic{background:#f2c94c;box-shadow:0 0 0 3px rgba(242,201,76,.25)}
 .small{font-size:.82rem;color:var(--muted);margin-top:10px}
 .shortcut{margin-top:28px;border:1px solid var(--red);border-radius:6px;padding:22px;background:var(--red-soft)}
 .shortcut h3{margin-top:4px}
@@ -398,10 +403,13 @@ footer{border-top:1px solid var(--line);padding-block:28px;font-size:.82rem;colo
 <div class="wrap">
   <header class="top">
     <div class="brand" id="brand"></div>
-    <nav class="switch" aria-label="切換學制">
-      <a href="#top" id="sw-main" aria-current="page">五專｜國中畢業</a>
-      <a href="#inservice" id="sw-in">二專在職專班｜社會人士</a>
-    </nav>
+    <div class="topr">
+      <nav class="switch" aria-label="切換學制">
+        <a href="#top" id="sw-main" aria-current="page">五專｜國中畢業</a>
+        <a href="#inservice" id="sw-in">二專在職專班｜社會人士</a>
+      </nav>
+      <button type="button" class="themebtn" id="themebtn" aria-label="切換深色或淺色模式"><span class="ic" aria-hidden="true"></span><span class="tx"></span></button>
+    </div>
   </header>
 
 <!-- ================= 五專視圖 ================= -->
@@ -1361,6 +1369,23 @@ function route() {
 }
 window.addEventListener("hashchange", route);
 route();
+
+/* ===== 深色／淺色模式切換（記住在這台瀏覽器） ===== */
+const themeBtn = document.getElementById("themebtn");
+const mq = window.matchMedia("(prefers-color-scheme: dark)");
+const currentTheme = () => document.documentElement.getAttribute("data-theme") || (mq.matches ? "dark" : "light");
+function applyTheme(t, save) {
+  document.documentElement.setAttribute("data-theme", t);
+  if (save) { try { localStorage.setItem("mkc-theme", t); } catch (e) {} }
+  const dark = t === "dark";
+  themeBtn.classList.toggle("isdark", dark);
+  themeBtn.querySelector(".tx").textContent = dark ? "淺色模式" : "深色模式";
+  themeBtn.setAttribute("aria-pressed", dark);
+}
+let savedTheme = null;
+try { savedTheme = localStorage.getItem("mkc-theme"); } catch (e) {}
+applyTheme(savedTheme === "dark" || savedTheme === "light" ? savedTheme : currentTheme(), false);
+themeBtn.addEventListener("click", () => applyTheme(currentTheme() === "dark" ? "light" : "dark", true));
 
 /* ===== 漂浮「回首頁」按鈕 ===== */
 const toTop = document.getElementById("totop");
