@@ -335,6 +335,11 @@ table.fee td{text-align:right}
 table.fee thead th{text-align:right}
 table.fee thead th:first-child{text-align:left}
 details .a .tbl{margin:10px 0}
+.totop{position:fixed;z-index:20;right:calc(16px + env(safe-area-inset-right,0px));bottom:calc(16px + env(safe-area-inset-bottom,0px));display:inline-flex;align-items:center;gap:6px;font:inherit;font-size:.88rem;font-weight:500;padding:10px 16px;border-radius:999px;border:1px solid var(--ink);background:var(--paper);color:var(--ink);cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.15);transition:background .15s,color .15s}
+.totop span{font-family:var(--f-mono);font-size:1rem;line-height:1}
+.totop:hover{background:var(--ink);color:var(--paper)}
+.inservice-on .totop{border-color:var(--green);color:var(--green)}
+.inservice-on .totop:hover{background:var(--green);color:var(--paper)}
 .small{font-size:.82rem;color:var(--muted);margin-top:10px}
 .shortcut{margin-top:28px;border:1px solid var(--red);border-radius:6px;padding:22px;background:var(--red-soft)}
 .shortcut h3{margin-top:4px}
@@ -1050,6 +1055,7 @@ footer{border-top:1px solid var(--line);padding-block:28px;font-size:.82rem;colo
 
   <footer id="foot"></footer>
 </div>
+<button type="button" class="totop" id="totop" aria-label="回到頁面最上方" hidden><span aria-hidden="true">↑</span>回首頁</button>
 
 <script>
 /* ===== 可修改的設定 ===== */
@@ -1343,6 +1349,7 @@ function route() {
   const isIn = IN_IDS.includes(h);
   document.getElementById("view-main").hidden = isIn;
   document.getElementById("view-inservice").hidden = !isIn;
+  document.body.classList.toggle("inservice-on", isIn);
   document.querySelector("[data-main-only]").hidden = isIn;
   document.getElementById("sw-main").setAttribute("aria-current", isIn ? "false" : "page");
   document.getElementById("sw-in").setAttribute("aria-current", isIn ? "page" : "false");
@@ -1354,6 +1361,16 @@ function route() {
 }
 window.addEventListener("hashchange", route);
 route();
+
+/* ===== 漂浮「回首頁」按鈕 ===== */
+const toTop = document.getElementById("totop");
+const updateTop = () => { toTop.hidden = window.scrollY < 500; };
+window.addEventListener("scroll", updateTop, { passive: true });
+toTop.addEventListener("click", () => {
+  const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  window.scrollTo({ top: 0, behavior: reduce ? "auto" : "smooth" });
+});
+updateTop();
 
 /* ===== 視光產業角色示意圖（Wikimedia Commons 公開授權圖片） ===== */
 const PHOTOS = {
