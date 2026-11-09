@@ -318,6 +318,18 @@ table.cmp3 thead th.me{color:var(--ai)}
 @media (prefers-reduced-motion:reduce){.rpanel.flash{animation:none}}
 .banner.disclaimer{background:var(--red-soft);color:var(--ink);border-left:3px solid var(--red)}
 .banner.disclaimer b{color:var(--red)}
+.admgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px}
+.admcard{border:1px solid var(--line);border-radius:6px;padding:18px;display:grid;gap:10px;align-content:start}
+.admcard .eyebrow{color:var(--green)}
+.inservice .keys b{color:var(--green)}
+.bignum{font-family:var(--f-display);font-size:2.6rem;font-weight:900;color:var(--green);line-height:1}
+.bignum small{font-size:1rem;color:var(--muted);font-weight:400}
+.inservice .four li::before{background:var(--green)}
+.paths3{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.paths3 article{border-top:3px solid var(--green);padding:14px 4px 4px;display:grid;gap:6px;align-content:start}
+.paths3 .eyebrow{color:var(--green)}
+.paths3 h3{font-size:1.05rem}
+.paths3 p:not(.eyebrow){font-size:.92rem;color:var(--muted)}
 .small{font-size:.82rem;color:var(--muted);margin-top:10px}
 .shortcut{margin-top:28px;border:1px solid var(--red);border-radius:6px;padding:22px;background:var(--red-soft)}
 .shortcut h3{margin-top:4px}
@@ -798,13 +810,13 @@ footer{border-top:1px solid var(--line);padding-block:28px;font-size:.82rem;colo
 <main id="view-inservice" class="inservice" hidden>
   <div class="hero">
     <div>
-      <p class="eyebrow">二專進修部在職專班 · 給已經在工作的你</p>
-      <h1 style="margin-top:12px">把現場經驗<br>變成<em style="color:var(--green)">一張證照</em></h1>
-      <p class="lead">已經在眼鏡門市、驗光所或相關產業工作，但還沒有驗光人員證照？在職專班用三年、六個學期，把你在現場學到的經驗補上完整的專業知識與實習，畢業取得副學士，就能報考驗光師。</p>
+      <p class="eyebrow">二專進修部在職專班 · 給正在工作的你</p>
+      <h1 style="margin-top:12px">邊工作邊進修<br>多一項<em style="color:var(--green)">醫事專長</em></h1>
+      <p class="lead">不論你現在做哪一行，只要具備高職（或同等學力）資格、報考時在職，就能報考視光學科在職專班。每週上課兩天、三年六個學期，畢業取得副學士，就能報考驗光師。</p>
       <div class="roles">
+        <a href="#in-admission" class="alt">看報考資格</a>
         <a href="#in-courses" class="alt">看課程地圖</a>
         <a href="#in-results" class="alt">看考取率</a>
-        <a href="#in-contact" class="alt">報名諮詢</a>
       </div>
     </div>
     <figure class="chart-va" aria-label="在職專班六學期節奏">
@@ -813,8 +825,8 @@ footer{border-top:1px solid var(--line);padding-block:28px;font-size:.82rem;colo
       <div class="row"><span class="va">二上</span><span class="opt" style="font-size:1.25rem;letter-spacing:.05em">專業技能</span></div>
       <div class="row"><span class="va">二下</span><span class="opt" style="font-size:1.25rem;letter-spacing:.05em">校外實習</span></div>
       <div class="row"><span class="va">三上</span><span class="opt" style="font-size:1.25rem;letter-spacing:.05em">校外實習</span></div>
-      <div class="row"><span class="va">三下</span><span class="opt" style="font-size:1.25rem;letter-spacing:.05em;color:var(--green)">回校衝刺國考</span></div>
-      <figcaption>三年六學期的學習節奏，畢業當年就能報考驗光師。</figcaption>
+      <div class="row"><span class="va">三下</span><span class="opt" style="font-size:1.25rem;letter-spacing:.05em;color:var(--green)">技術整合</span></div>
+      <figcaption>依二專在職專班課程地圖整理的三年六學期安排。</figcaption>
     </figure>
   </div>
 
@@ -822,20 +834,83 @@ footer{border-top:1px solid var(--line);padding-block:28px;font-size:.82rem;colo
     <div class="sec-head">
       <p class="eyebrow">01 · 認識在職專班</p>
       <div><h2>為工作中的人設計的三年學制</h2>
-      <p>在職專班屬於二專進修部，透過單獨招生入學。課程從眼球生理、視光學、配鏡學一路到技術整合，中間安排兩個學期的校外實習。報考資格與上課時段依當年度招生簡章規定。</p></div>
+      <p>在職專班屬於二專進修部，透過學校單獨招生入學。不需要視光背景，課程從眼球生理、視光學、配鏡學一路到技術整合，中間安排兩個學期的校外實習。</p></div>
     </div>
     <div class="body">
       <div class="facts">
-        <div><b class="num">3 年</b><span>六個學期，含兩學期校外實習</span></div>
-        <div><b>副學士</b><span>畢業學位；可再接二技、研究所</span></div>
-        <div><b>驗光師</b><span>專科畢業、實習及格即可報考</span></div>
+        <div><b>每週 2 天</b><span>週一或週二＋週四或週五，08:00–17:05（114 學年度）</span></div>
+        <div><b class="num">3 年</b><span>六個學期，畢業取得副學士</span></div>
+        <div><b>關渡校區</b><span>捷運淡水線關渡站步行約 10 分鐘</span></div>
       </div>
+    </div>
+  </section>
+
+  <section id="in-admission">
+    <div class="sec-head">
+      <p class="eyebrow">02 · 招生資訊與報考資格</p>
+      <div><h2>誰可以報？怎麼報？</h2>
+      <p>以下依 114 學年度招生簡章整理，讓你先了解大致流程。</p></div>
+    </div>
+    <div class="body" style="display:grid;gap:20px">
+      <p class="banner disclaimer" style="margin:0"><b>歷史資料僅供參考，一切規則以當學年度招生簡章公告為主。</b>116 學年度簡章公告後，請以學校招生專區最新版本為準。</p>
+
+      <div class="admgrid">
+        <article class="admcard">
+          <p class="eyebrow">報考資格</p>
+          <ul class="keys">
+            <li>高級職業學校或同等學校<b>畢業</b>，或經教育部認定具<b>同等學力</b>（例如持丙級技術士證滿 5 年、乙級滿 2 年等）。</li>
+            <li>取得報考學力資格後<b>滿 1 年以上</b>。</li>
+            <li>報考時為<b>在職身分</b>，男女兼收。</li>
+          </ul>
+          <p class="small">同等學力的認定項目很多，是否符合請以簡章「報考學力資格認定標準」為準。</p>
+        </article>
+        <article class="admcard">
+          <p class="eyebrow">甄選方式</p>
+          <ul class="keys">
+            <li>書面審查，不用筆試。</li>
+            <li>主要看<b>自傳及進修動機報告書</b>，也會參考工作經驗。</li>
+            <li>視光相關證照、醫學或視光相關研習、其他證照等可以加分。</li>
+          </ul>
+          <p class="small">簡章特別說明：不具備相關工作經驗或證照是常態，沒有加分項目的考生，請在自傳與進修動機上好好表現。</p>
+        </article>
+        <article class="admcard">
+          <p class="eyebrow">名額</p>
+          <p class="bignum num">40 <small>名</small></p>
+          <p class="small" style="margin:0">114 學年度視光學科在職專班名額。116 學年度名額以當年度簡章為準。</p>
+        </article>
+      </div>
+
+      <div>
+        <h3 class="sub3" style="margin-top:0">報名要準備什麼？</h3>
+        <ol class="four checklist">
+          <li><b>報名表</b><span>貼照片與身分證正反面影本，本人親筆簽名。</span></li>
+          <li><b>學歷或同等學力證件影本</b><span>報到時須繳交正本。</span></li>
+          <li><b>服務年資證明</b><span>在職證明或服務證明書、離職證明、投保薪資紀錄等，並附年資統計表。</span></li>
+          <li><b>訓練、研習、進修、證照</b><span>一覽表與證明影本（有的話）。</span></li>
+          <li><b>自傳及進修動機報告書</b><span>依簡章題目書寫，例如報考動機、預計如何應用所學、預期的困難與因應方式。</span></li>
+          <li><b>報名費</b><span>114 學年度為新臺幣 800 元郵政匯票；低收入戶與本校校友可免繳（需附證明）。</span></li>
+        </ol>
+        <p class="small">114 學年度採<b>通訊報名</b>，以掛號、快遞或宅急便寄到學校，郵戳為憑。</p>
+      </div>
+
+      <div>
+        <h3 class="sub3" style="margin-top:0">重要日程（114 學年度，供參考）</h3>
+        <ul class="dates">
+          <li><span>2/27</span><span>簡章公告（學校招生專區免費下載）</span></li>
+          <li><span>2/27 – 5/1</span><span>通訊報名</span></li>
+          <li><span>6/6 16:00</span><span>網路成績查詢</span></li>
+          <li><span>6/17 16:00</span><span>網路榜單查詢</span></li>
+          <li><span>6/23 前</span><span>正取生報到（通訊或現場，繳交學歷正本）</span></li>
+        </ul>
+        <p class="small">已透過其他升學管道錄取的考生，需先繳交原錄取學校的放棄聲明書才能報考，詳見簡章。</p>
+      </div>
+      <p class="src" style="margin:0"><b>資料來源：</b>馬偕學校財團法人馬偕醫護管理專科學校 114 學年度二專進修部在職專班單獨招生簡章。報名與簡章問題請洽教務處進修組，電話 (02) 2858-4180 分機 2113、2203。</p>
     </div>
   </section>
 
   <section id="in-results">
     <div class="sec-head">
-      <p class="eyebrow">02 · 國考成績</p>
+      <p class="eyebrow">03 · 國考成績</p>
       <div><h2>在職同學一樣考得上</h2>
       <p>很多在職同學不是理工背景、離開校園也很久了，一樣能考取驗光人員證照。</p></div>
     </div>
@@ -858,7 +933,7 @@ footer{border-top:1px solid var(--line);padding-block:28px;font-size:.82rem;colo
 
   <section id="in-courses">
     <div class="sec-head">
-      <p class="eyebrow">03 · 課程地圖</p>
+      <p class="eyebrow">04 · 課程地圖</p>
       <div><h2>三年怎麼學：專業 → 實習 → 整合</h2>
       <p>上方為國考核心科目，虛線以下為其他課程。</p></div>
     </div>
@@ -868,11 +943,28 @@ footer{border-top:1px solid var(--line);padding-block:28px;font-size:.82rem;colo
     </div>
   </section>
 
+  <section id="in-future">
+    <div class="sec-head">
+      <p class="eyebrow">05 · 未來發展與職涯</p>
+      <div><h2>畢業之後，三條路都走得通</h2>
+      <p>在職專班的同學背景很多元：有人想在原本的眼鏡產業拿到證照，有人想轉換跑道，也有人想繼續升學。</p></div>
+    </div>
+    <div class="body" style="display:grid;gap:20px">
+      <div class="paths3">
+        <article><p class="eyebrow">考照執業</p><h3>報考驗光師，成為醫事人員</h3><p>專科畢業、實習及格即可報考驗光師高考。依《驗光人員法》，執行驗光業務須具驗光人員資格，證照讓你的專業被看見。</p></article>
+        <article><p class="eyebrow">轉換跑道</p><h3>多一項醫事專長</h3><p>視光產業不只第一線的驗光與配鏡，也包括鏡片與隱形眼鏡製造、光學與儀器研發、通路經營與產品教育、影像資料管理等。</p></article>
+        <article><p class="eyebrow">繼續升學</p><h3>二技、碩士都接得上</h3><p>可升讀二技取得學士；取得驗光師證書後，可依《入學大學同等學力認定標準》第五條第五款，以同等學力報考碩士班。</p></article>
+      </div>
+      <p class="small" style="margin:0">想看配鏡師、驗光師、眼科醫師的分工，以及狹義與廣義視光產業的完整介紹，可以看<a href="#future">五專頁的「未來發展」</a>。</p>
+      <p class="src" style="margin:0"><b>資料來源（第三方資料）：</b>《驗光人員法》；教育部《入學大學同等學力認定標準》第五條。</p>
+    </div>
+  </section>
+
   <section id="in-salary">
     <div class="sec-head">
-      <p class="eyebrow">04 · 取得證照之後</p>
+      <p class="eyebrow">06 · 取得證照之後</p>
       <div><h2>證照讓經驗被看見</h2>
-      <p>驗光人員法施行後，執行驗光業務須具驗光人員資格。同一家公司，有證照和沒證照的起薪就不一樣，下面可以自己篩選比較。</p></div>
+      <p>同一家公司，有證照和沒證照的起薪就不一樣，下面可以自己篩選比較。</p></div>
     </div>
     <div class="body">
       <div data-salary></div>
@@ -881,23 +973,29 @@ footer{border-top:1px solid var(--line);padding-block:28px;font-size:.82rem;colo
 
   <section id="in-faq">
     <div class="sec-head">
-      <p class="eyebrow">05 · 常見問題</p>
+      <p class="eyebrow">07 · 常見問題</p>
       <div><h2>在職同學最常問的問題</h2></div>
     </div>
     <div class="body">
-      <details open><summary>我不是理工背景，數學和物理都忘了，跟得上嗎？</summary><div class="a"><p>跟得上。課程從眼球生理、視光學、配鏡學等基礎科目循序漸進，國考會用到的屈光度、透鏡計算都會在專業課裡從頭教起，實驗課也會帶著實際操作。過去也有許多非理工背景的在職同學順利考取證照。</p></div></details>
-      <details><summary>一邊上班一邊上課，時間怎麼安排？</summary><div class="a"><p>在職專班是為工作中的人開設的學制，上課時段與學期安排請以當年度招生簡章公告為準，建議報名前詳閱簡章。</p></div></details>
+      <details open><summary>我不是做眼鏡或醫療相關工作，可以報考嗎？</summary><div class="a"><p>可以。報考資格看的是學歷（或同等學力）與「報考時為在職身分」，不限工作類別。簡章也說明，在職進修本來就是學習第二專長，不具備相關工作經驗或證照是常態。</p></div></details>
+      <details><summary>我只有高中畢業，不是高職，可以報嗎？</summary><div class="a"><p>報考資格是高級職業學校或同等學校畢業，或經教育部認定具同等學力。不同學歷的認定方式不同，請對照簡章的「報考學力資格認定標準」，有疑問可洽教務處進修組確認。</p></div></details>
+      <details><summary>要考筆試嗎？甄選看什麼？</summary><div class="a"><p>以 114 學年度為例，是書面審查，不用筆試。主要看自傳及進修動機報告書，也會參考工作經驗；視光相關證照、研習與其他證照可以加分。實際方式以當年度簡章為準。</p></div></details>
+      <details><summary>一邊上班一邊上課，時間怎麼安排？</summary><div class="a"><p>以 114 學年度為例，每週上課 2 天（週一或週二、週四或週五），時間 08:00–17:05，上課地點在關渡校區。實際時段以當年度簡章公告為準。</p></div></details>
+      <details><summary>我不是理工背景，數學和物理都忘了，跟得上嗎？</summary><div class="a"><p>跟得上。課程從眼球生理、視光學、配鏡學等基礎科目循序漸進，國考會用到的屈光度、透鏡計算都會在專業課裡從頭教起，實驗課也會帶著實際操作。過去也有許多非理工背景的在職同學順利考取證照。</p></div></details>
       <details><summary>校外實習要離開原本的工作嗎？</summary><div class="a"><p>依課程地圖，校外實習安排在二年級下學期與三年級上學期。實習相關規定以當年度招生簡章公告為主，建議報名前詳閱簡章。</p></div></details>
-      <details><summary>畢業後可以做什麼？</summary><div class="a"><p>取得副學士後可報考驗光師；也可以繼續就讀二技視光系取得學士。取得驗光師證書後，依《入學大學同等學力認定標準》第五條第五款（第三方資料），還能以同等學力直接報考碩士班。</p></div></details>
-      <details><summary>報名資格與時間去哪裡看？</summary><div class="a"><p>二專進修部在職專班為單獨招生，報考資格、名額、甄選方式與日程以馬偕專校招生專區公告的當年度簡章為準。</p></div></details>
+      <details><summary>報名費多少？有減免嗎？</summary><div class="a"><p>114 學年度報名費為新臺幣 800 元（郵政匯票）。低收入戶考生附證明文件可全免，本校校友附佐證資料也可免繳。實際金額以當年度簡章為準。</p></div></details>
+      <details><summary>工作年資怎麼證明？</summary><div class="a"><p>可以用在職證明或簡章附的服務證明書、離職證明影本，或投保薪資紀錄等具公信力的文件，並填寫年資統計表。以 114 學年度為例，現職年資可推算至當年 9 月 30 日。</p></div></details>
+      <details><summary>畢業後一定能考驗光師嗎？</summary><div class="a"><p>專科以上學校視光科系畢業、實習期滿成績及格，即符合驗光師考試的學歷資格。簡章也提醒，驗光人員考試屬專門職業及技術人員考試，須具中華民國國民身分才能應考。</p></div></details>
+      <details><summary>畢業後可以繼續念書嗎？</summary><div class="a"><p>可以。可升讀二技視光系取得學士；取得驗光師證書後，依《入學大學同等學力認定標準》第五條第五款，也能以同等學力報考碩士班。</p></div></details>
+      <p class="src"><b>資料來源：</b>馬偕專校 114 學年度二專進修部在職專班單獨招生簡章；《驗光人員法》、《入學大學同等學力認定標準》（第三方資料）。歷史資料僅供參考，一切以當學年度簡章公告為主。</p>
     </div>
   </section>
 
   <section id="in-contact">
     <div class="sec-head">
-      <p class="eyebrow">06 · 報名諮詢</p>
-      <div><h2>不確定自己適不適合？先聊聊</h2>
-      <p>工作年資、學歷、上課時間、實習安排，都可以先問清楚再決定。</p></div>
+      <p class="eyebrow">08 · 報名諮詢</p>
+      <div><h2>不確定自己適不適合？先問清楚</h2>
+      <p>簡章與報名流程請洽教務處進修組，電話 (02) 2858-4180 分機 2113、2203；簡章可到馬偕專校首頁的招生專區免費下載。科系相關問題也歡迎聯絡視光學科。</p></div>
     </div>
     <div class="body contact" data-contact></div>
   </section>
@@ -1210,7 +1308,7 @@ function showRole(role) {
 document.querySelectorAll('.tabs [role="tab"]').forEach(t => t.addEventListener("click", () => showRole(t.dataset.role)));
 
 /* ===== 視圖切換（#inservice 為在職專班） ===== */
-const IN_IDS = ["inservice", "in-what", "in-results", "in-courses", "in-salary", "in-faq", "in-contact"];
+const IN_IDS = ["inservice", "in-what", "in-admission", "in-results", "in-courses", "in-future", "in-salary", "in-faq", "in-contact"];
 function route() {
   const h = location.hash.replace("#", "");
   const isIn = IN_IDS.includes(h);
