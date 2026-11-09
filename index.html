@@ -1,0 +1,1231 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>看清楚你的下一步</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="五專升學指南與二專在職專班介紹：入學管道與時程、國考考取率、起薪、課程地圖，以及馬偕專校視光學科的未來發展。">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600;900&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: 單欄閱讀流，像一張驗光紀錄表 — 細線分格、左側小標籤、右側內容；兩個視圖（五專／在職專班）以 #hash 切換 */
+:root{
+  --paper:#fbfaf7; --ink:#1d2430; --muted:#5f6876; --line:#dcdfe3; --panel:#f1f3f2;
+  --ai:#22406b; --ai-soft:#e3e9f2;
+  --red:#b23a32; --green:#2f6b4f; --red-soft:#f6e6e3; --green-soft:#e2efe8;
+  --nat:#9a8f80;
+  --f-display:"Noto Serif TC","Songti TC","PMingLiU",serif;
+  --f-body:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --paper:#14181e; --ink:#e7e9ec; --muted:#9aa3ae; --line:#2b323b; --panel:#1b2129;
+  --ai:#8fb0dd; --ai-soft:#1f2a3a; --red:#e2786f; --green:#7cc3a0; --red-soft:#33201f; --green-soft:#1b2e25; --nat:#a39886; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#14181e; --ink:#e7e9ec; --muted:#9aa3ae; --line:#2b323b; --panel:#1b2129;
+  --ai:#8fb0dd; --ai-soft:#1f2a3a; --red:#e2786f; --green:#7cc3a0; --red-soft:#33201f; --green-soft:#1b2e25; --nat:#a39886; color-scheme:dark}
+
+*{box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.8;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.wrap{max-width:1040px;margin:0 auto}
+a{color:var(--ai)}
+:focus-visible{outline:2px solid var(--ai);outline-offset:3px;border-radius:4px}
+h1,h2,h3{font-family:var(--f-display);text-wrap:balance;line-height:1.35;margin:0}
+h2{font-size:clamp(1.5rem,3.2vw,2rem);font-weight:900}
+h3{font-size:1.15rem;font-weight:600}
+p{margin:0}
+.eyebrow{font-family:var(--f-mono);font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.num{font-family:var(--f-mono);font-variant-numeric:tabular-nums}
+
+/* top bar */
+.top{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-block:16px;border-bottom:1px solid var(--line);flex-wrap:wrap}
+.brand{font-weight:700;letter-spacing:.04em;font-size:.95rem}
+.brand span{color:var(--muted);font-weight:400}
+.switch{display:flex;border:1px solid var(--ink);border-radius:999px;overflow:hidden;font-size:.88rem}
+.switch a{padding:6px 16px;text-decoration:none;color:var(--ink);font-weight:500}
+.switch a[aria-current="page"]{background:var(--ink);color:var(--paper)}
+.subnav{display:flex;gap:18px;flex-wrap:wrap;font-size:.88rem;padding-block:10px;border-bottom:1px solid var(--line)}
+.subnav a{color:var(--muted);text-decoration:none}
+.subnav a:hover{color:var(--ai)}
+
+/* hero */
+.hero{display:grid;grid-template-columns:1.25fr 1fr;gap:48px;align-items:center;padding-block:52px 44px}
+.hero>*{min-width:0}
+.hero h1{font-size:clamp(2.2rem,6vw,3.6rem);font-weight:900;letter-spacing:.02em}
+.hero h1 em{font-style:normal;color:var(--ai)}
+.hero .lead{margin-top:18px;color:var(--muted);max-width:34em}
+.roles{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px}
+.roles a{border:1px solid var(--ink);color:var(--ink);text-decoration:none;padding:9px 18px;border-radius:999px;font-weight:500;font-size:.95rem;transition:background .15s,color .15s}
+.roles a:hover{background:var(--ink);color:var(--paper)}
+.roles a.alt{border-color:var(--green);color:var(--green)}
+.roles a.alt:hover{background:var(--green);color:var(--paper)}
+
+.hero-img{--h-bg:#fcf6e9;--h-ink:#1d2430;--h-muted:#4f5865;--h-ai:#22406b;--h-green:#2f6b4f;
+  position:relative;display:block;background:var(--h-bg);border-radius:8px;overflow:hidden;margin-top:24px;padding:0;min-height:480px}
+.hero-img .hero-text{position:relative;z-index:1;max-width:520px;padding:48px 0 48px 44px;color:var(--h-ink)}
+.hero-img .eyebrow{color:var(--h-muted)}
+.hero-img h1 em{color:var(--h-ai)}
+.hero-img .lead{color:var(--h-muted)}
+.hero-img .roles a{border-color:var(--h-ink);color:var(--h-ink);background:rgba(252,246,233,.7)}
+.hero-img .roles a:hover{background:var(--h-ink);color:var(--h-bg)}
+.hero-img .roles a.alt{border-color:var(--h-green);color:var(--h-green)}
+.hero-img .roles a.alt:hover{background:var(--h-green);color:var(--h-bg)}
+.hero-img img{position:absolute;right:0;top:0;height:100%;width:auto;max-width:none}
+@media (max-width:980px){.hero-img .hero-text{max-width:46%}}
+@media (max-width:820px){
+  .hero-img{min-height:0}
+  .hero-img .hero-text{max-width:none;padding:32px 20px 8px}
+  .hero-img img{position:static;display:block;width:100%;max-width:100%;height:auto;aspect-ratio:1/1;object-fit:cover;object-position:100% 50%}
+}
+.chart-va{border:1px solid var(--line);background:var(--panel);padding:22px 20px 16px;border-radius:6px;margin:0}
+.chart-va .row{display:grid;grid-template-columns:3.2em 1fr;align-items:center;gap:10px;border-bottom:1px dashed var(--line);padding-block:6px}
+.chart-va .row:last-of-type{border-bottom:0}
+.chart-va .va{font-family:var(--f-mono);font-size:.75rem;color:var(--muted)}
+.chart-va .opt{display:flex;justify-content:center;font-family:var(--f-display);font-weight:900;color:var(--ink);line-height:1;letter-spacing:.15em;text-align:center}
+.duo{display:grid;grid-template-columns:1fr 1fr;margin-top:12px;border-radius:4px;overflow:hidden;font-size:.82rem;text-align:center}
+.duo div{padding:8px 4px;font-weight:500}
+.duo .r{background:var(--red-soft);color:var(--red)}
+.duo .g{background:var(--green-soft);color:var(--green)}
+.chart-va figcaption{margin-top:10px;font-size:.78rem;color:var(--muted)}
+
+/* sections */
+section{padding-block:52px;border-top:1px solid var(--line)}
+.sec-head{display:grid;grid-template-columns:200px 1fr;gap:32px;margin-bottom:28px}
+.sec-head>*{min-width:0}
+.sec-head p{color:var(--muted);margin-top:10px;max-width:40em}
+.body{margin-left:232px}
+.body>*{min-width:0}
+
+.facts{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--line);border-radius:6px;overflow:hidden}
+.facts div{padding:20px;border-right:1px solid var(--line)}
+.facts div:last-child{border-right:0}
+.facts b{display:block;font-family:var(--f-display);font-size:1.6rem;color:var(--ai);line-height:1.3}
+.facts span{font-size:.92rem;color:var(--muted)}
+.inservice .facts b{color:var(--green)}
+
+/* timeline */
+.tl{list-style:none;margin:0;padding:0;position:relative}
+.tl::before{content:"";position:absolute;left:6.6em;top:8px;bottom:8px;width:1px;background:var(--line)}
+.tl li{display:grid;grid-template-columns:6em 1fr;gap:1.6em;padding-block:12px;position:relative}
+.tl li>*{min-width:0}
+.tl li::after{content:"";position:absolute;left:calc(6.6em - 5px);top:22px;width:11px;height:11px;border-radius:50%;background:var(--paper);border:2px solid var(--ai)}
+.tl li.exam::after{background:var(--ai)}
+.tl .when{font-family:var(--f-mono);font-size:.82rem;color:var(--muted);padding-top:3px;line-height:1.5}
+.tl h3{font-size:1.05rem}
+.tl p{color:var(--muted);font-size:.95rem}
+.dates{list-style:none;margin:8px 0 0;padding:0;font-size:.88rem;display:grid;gap:2px}
+.dates li{display:grid;grid-template-columns:8.5em 1fr;gap:10px;padding:0}
+.dates li::after{display:none}
+.dates span:first-child{font-family:var(--f-mono);font-variant-numeric:tabular-nums;color:var(--ink)}
+.dates span:last-child{color:var(--muted)}
+.tag{display:inline-block;font-size:.72rem;font-weight:700;padding:1px 8px;border-radius:3px;margin-left:6px;vertical-align:2px;font-family:var(--f-body)}
+.tag.no{background:var(--green-soft);color:var(--green)}
+.tag.yes{background:var(--ai-soft);color:var(--ai)}
+.quota{margin-top:10px;display:inline-flex;gap:10px;align-items:baseline;border:1px solid var(--ai);border-radius:4px;padding:6px 12px;font-size:.9rem}
+.quota b{font-family:var(--f-display);font-size:1.3rem;color:var(--ai)}
+.note{margin-top:20px;font-size:.88rem;color:var(--muted);padding:12px 16px;border-left:3px solid var(--red);background:var(--red-soft)}
+.note b{color:var(--red)}
+.banner{font-size:.88rem;padding:10px 14px;background:var(--panel);border-radius:4px;margin-bottom:20px;color:var(--muted)}
+.banner b{color:var(--ink)}
+
+.tbl{overflow-x:auto;margin-top:36px;border:1px solid var(--line);border-radius:6px}
+table{border-collapse:collapse;width:100%;min-width:640px;font-size:.92rem}
+th,td{padding:12px 14px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+thead th{background:var(--panel);font-weight:700;font-size:.85rem}
+tbody th{font-weight:700;white-space:nowrap}
+tr:last-child th,tr:last-child td{border-bottom:0}
+
+.quiz{margin-top:36px;border:1px solid var(--ai);border-radius:6px;padding:24px}
+.quiz h3{color:var(--ai)}
+.q{margin-top:16px}
+.q p{font-weight:500}
+.opts{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+.opts button,.seg button{font:inherit;font-size:.9rem;padding:7px 16px;border-radius:999px;border:1px solid var(--line);background:var(--paper);color:var(--ink);cursor:pointer}
+.opts button[aria-pressed="true"],.seg button[aria-pressed="true"]{background:var(--ai);border-color:var(--ai);color:var(--paper)}
+.inservice .seg button[aria-pressed="true"]{background:var(--green);border-color:var(--green)}
+.result{margin-top:20px;padding:16px 18px;background:var(--ai-soft);border-radius:4px}
+.result b{color:var(--ai)}
+
+/* careers */
+.lic{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.lic>div{border:1px solid var(--line);border-radius:6px;padding:20px}
+.lic>div:first-child{border-color:var(--ai);background:var(--ai-soft)}
+.lic h3 small{font-family:var(--f-mono);font-size:.75rem;color:var(--muted);font-weight:400;margin-left:6px}
+.lic p{font-size:.94rem;margin-top:8px}
+.fields{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:6px;overflow:hidden;margin-top:28px}
+.fields div{background:var(--paper);padding:18px}
+.fields h3{font-size:1rem}
+.fields p{font-size:.9rem;color:var(--muted);margin-top:4px}
+
+/* charts */
+.chartbox{border:1px solid var(--line);border-radius:6px;padding:20px}
+.chart-top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.seg{display:flex;gap:6px;flex-wrap:wrap}
+.legend{display:flex;gap:16px;flex-wrap:wrap;font-size:.85rem;color:var(--muted)}
+.legend i{display:inline-block;width:18px;height:3px;vertical-align:4px;margin-right:6px;border-radius:2px}
+.svgwrap{overflow-x:auto;margin-top:12px}
+.svgwrap svg{display:block;width:100%;min-width:520px;height:auto}
+.svgwrap text{font-family:var(--f-mono);font-size:11px;fill:var(--muted)}
+.svgwrap .lbl{font-size:11.5px;font-weight:500}
+.headline{font-size:1rem;margin-top:14px}
+.headline b{color:var(--ai)}
+.inservice .headline b{color:var(--green)}
+.src{margin-top:12px;font-size:.8rem;color:var(--muted);line-height:1.6}
+.src b{color:var(--ink);font-weight:500}
+
+.bars{display:grid;gap:10px;margin-top:8px}
+.bar{display:grid;grid-template-columns:6.5em 1fr 5.5em;gap:12px;align-items:center;font-size:.92rem}
+.bar>*{min-width:0}
+.bar .track{height:14px;background:var(--panel);border-radius:2px;overflow:hidden}
+.bar .fill{height:100%;background:var(--ai);border-radius:2px}
+.bar:first-child .fill{background:var(--red)}
+.bar .v{text-align:right;font-family:var(--f-mono);font-variant-numeric:tabular-nums}
+
+/* course map */
+.cmap{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px}
+.col{border:1px solid var(--line);border-radius:6px;overflow:hidden;display:flex;flex-direction:column}
+.col header{padding:10px 14px;background:var(--ai);color:var(--paper)}
+.inservice .col header{background:var(--green)}
+.col header small{display:block;font-size:.72rem;letter-spacing:.1em;opacity:.85}
+.col header b{font-family:var(--f-display);font-size:1.05rem}
+.col ul{list-style:none;margin:0;padding:10px 14px;font-size:.88rem;line-height:1.65}
+.col .other{border-top:1px dashed var(--line);color:var(--muted);flex:1}
+.col .grp{font-size:.7rem;letter-spacing:.1em;color:var(--muted);padding:10px 14px 0}
+.col.intern{background:var(--ai-soft)}
+.inservice .col.intern{background:var(--green-soft)}
+.col.intern .big{flex:1;display:flex;align-items:center;justify-content:center;font-family:var(--f-display);font-size:1.5rem;font-weight:900;letter-spacing:.3em;writing-mode:vertical-rl;padding:20px;min-height:180px;color:var(--ai)}
+.inservice .col.intern .big{color:var(--green)}
+
+.flow{display:grid;grid-template-columns:repeat(4,1fr)}
+.flow div{padding:16px 14px;border-top:3px solid var(--ai)}
+.flow div:nth-child(2){border-color:color-mix(in srgb,var(--ai) 75%,var(--paper))}
+.flow div:nth-child(3){border-color:color-mix(in srgb,var(--ai) 50%,var(--paper))}
+.flow div:nth-child(4){border-color:color-mix(in srgb,var(--ai) 30%,var(--paper))}
+.inservice .flow div{border-color:var(--green)}
+.flow .yr{font-family:var(--f-mono);font-size:.78rem;color:var(--muted)}
+.flow h3{font-size:1rem;margin-top:2px}
+.flow p{font-size:.88rem;color:var(--muted);margin-top:4px}
+.salary .filters{display:grid;gap:10px;margin-top:14px}
+.salary .frow{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.salary .frow>span{font-size:.82rem;color:var(--muted);min-width:3em}
+.tierbars{display:grid;gap:8px;margin-top:18px}
+.tb{display:grid;grid-template-columns:7.5em 1fr 6.5em;gap:12px;align-items:center;font-size:.9rem}
+.tb>*{min-width:0}
+.tb .track{height:16px;background:var(--panel);border-radius:2px;overflow:hidden}
+.tb .fill{height:100%;border-radius:2px}
+.tb .v{text-align:right;font-family:var(--f-mono);font-variant-numeric:tabular-nums}
+.tb.dim{opacity:.45}
+.jobs{margin-top:18px;border-top:1px solid var(--line);max-height:420px;overflow-y:auto}
+.job{display:grid;grid-template-columns:minmax(0,1.3fr) 5.2em minmax(0,1fr);gap:12px;align-items:center;padding:9px 0;border-bottom:1px solid var(--line);font-size:.88rem}
+.job>*{min-width:0}
+.job .emp b{display:block;font-weight:500}
+.job .emp small{color:var(--muted);font-size:.78rem}
+.chip{font-size:.74rem;font-weight:700;padding:2px 8px;border-radius:3px;text-align:center;white-space:nowrap}
+.chip.t1{background:var(--ai-soft);color:var(--ai)}
+.chip.t2{background:var(--green-soft);color:var(--green)}
+.chip.t3{background:var(--panel);color:var(--muted)}
+.rng{position:relative;height:34px}
+.rng .ax{position:absolute;left:0;right:0;top:24px;height:2px;background:var(--panel)}
+.rng .sbar{position:absolute;top:20px;height:10px;border-radius:5px;background:var(--ai);opacity:.75}
+.rng .sbar.open{background:linear-gradient(90deg,var(--ai),transparent)}
+.rng .lab{position:absolute;top:0;font-family:var(--f-mono);font-size:.72rem;color:var(--muted);white-space:nowrap}
+.empty{padding:16px 0;color:var(--muted);font-size:.9rem}
+@media (max-width:820px){.job{grid-template-columns:1fr 5.2em}.job .rng{grid-column:1/-1}}
+.panel-lead{margin:18px 0 4px;max-width:44em}
+.pgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;margin:16px 0 20px}
+.pc{border:1px solid var(--line);border-radius:6px;padding:18px;display:flex;flex-direction:column;gap:8px}
+.pc.hl{border-color:var(--ai);background:var(--ai-soft)}
+.pc h3{font-size:1.05rem}
+.pc p{font-size:.92rem}
+.pc ul{margin:0;padding-left:1.1em;font-size:.92rem;display:grid;gap:4px}
+.pc .fit{color:var(--muted);font-size:.86rem;margin-top:auto}
+.pc .go{font-size:.88rem;font-weight:500;text-decoration:none;margin-top:auto}
+.rsteps{display:grid;grid-template-columns:1fr auto 1fr 1fr;gap:8px;margin:4px 0 0;align-items:stretch}
+.rsteps button{font:inherit;text-align:left;background:var(--paper);color:var(--ink);border:1px solid var(--line);border-radius:6px 6px 0 0;border-bottom:3px solid var(--line);padding:12px 14px;cursor:pointer;display:grid;gap:2px}
+.rsteps button span{font-size:.78rem;color:var(--muted)}
+.rsteps button b{font-family:var(--f-display);font-size:1.1rem}
+.rsteps button small{font-size:.78rem;color:var(--muted)}
+.rsteps button[aria-selected="true"]{border-color:var(--ai);border-bottom-color:var(--ai);background:var(--ai-soft)}
+.rsteps button[aria-selected="true"] b{color:var(--ai)}
+.rexam{display:grid;align-content:center;gap:2px;padding:8px 12px;border-left:2px dashed var(--line);border-right:2px dashed var(--line);font-size:.85rem;color:var(--muted)}
+.rexam span{font-size:.75rem}
+.rpanel{border:1px solid var(--line);border-top:0;border-radius:0 0 6px 6px;padding:22px;display:grid;gap:12px}
+.rpanel>*{min-width:0}
+.rpanel h3{font-size:1.2rem}
+.rpanel h4{font-family:var(--f-display);font-size:1rem;margin:10px 0 0}
+.rpanel .tbl{margin-top:0}
+.rpanel .tbl table{min-width:560px}
+.keys{margin:0;padding-left:1.2em;display:grid;gap:4px;font-size:.95rem}
+.keys b{color:var(--ai)}
+details.inner{border:1px solid var(--line);border-radius:6px;padding:0 14px}
+details.inner .a{padding-left:0;display:grid;gap:8px}
+details.inner summary::before{content:"＋"}
+details.inner[open] summary::before{content:"－"}
+.cmp-title{margin-top:36px}
+table.cmp{min-width:720px}
+table.cmp thead th{text-align:center}
+table.cmp tbody th{background:var(--panel)}
+@media (max-width:820px){.rsteps{grid-template-columns:1fr 1fr 1fr}.rexam{display:none}}
+.joinsteps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;counter-reset:js}
+.joinsteps li{counter-increment:js;border:1px solid var(--line);border-radius:6px;padding:16px 16px 14px;display:grid;gap:4px;position:relative}
+.joinsteps li::before{content:counter(js);font-family:var(--f-mono);font-size:.8rem;color:var(--ai);border:1px solid var(--ai);border-radius:50%;width:24px;height:24px;display:grid;place-items:center}
+.joinsteps b{font-weight:700}
+.joinsteps span{font-size:.86rem;color:var(--muted)}
+.small{font-size:.82rem;color:var(--muted);margin-top:10px}
+.shortcut{margin-top:28px;border:1px solid var(--red);border-radius:6px;padding:22px;background:var(--red-soft)}
+.shortcut h3{margin-top:4px}
+.shortcut .eyebrow{color:var(--red)}
+.shortcut>p{margin-top:8px;font-size:.95rem}
+.sc-flow{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:14px;font-weight:700}
+.sc-flow span{background:var(--paper);border:1px solid var(--red);color:var(--red);border-radius:999px;padding:4px 14px;font-size:.9rem}
+.sc-flow span+span::before{content:"→";margin-right:10px;color:var(--muted)}
+
+.tabs{display:flex;border-bottom:1px solid var(--line);flex-wrap:wrap}
+.tabs button{font:inherit;font-weight:500;background:none;border:0;border-bottom:3px solid transparent;padding:10px 18px;color:var(--muted);cursor:pointer;margin-bottom:-1px}
+.tabs button[aria-selected="true"]{color:var(--ink);border-color:var(--ai)}
+details{border-bottom:1px solid var(--line);padding-block:4px}
+summary{cursor:pointer;padding:14px 0;font-weight:500;list-style:none;display:flex;gap:12px;align-items:baseline}
+summary::-webkit-details-marker{display:none}
+summary::before{content:"Q";font-family:var(--f-mono);color:var(--ai);font-weight:500}
+.inservice summary::before{color:var(--green)}
+details[open] summary{color:var(--ai)}
+.inservice details[open] summary{color:var(--green)}
+details .a{padding:0 0 16px 1.6em;color:var(--muted);font-size:.95rem;max-width:44em}
+
+.contact{display:grid;grid-template-columns:1.2fr 1fr;gap:32px;align-items:start}
+.contact>*{min-width:0}
+.card{border:1px solid var(--line);border-radius:6px;padding:22px}
+.card .name{font-family:var(--f-display);font-size:1.4rem;font-weight:900;margin-top:6px}
+.card .role{color:var(--muted);font-size:.9rem}
+.kv{display:grid;grid-template-columns:4em 1fr auto;gap:8px 12px;margin-top:16px;align-items:center;font-size:.95rem}
+.kv>*{min-width:0;overflow-wrap:anywhere}
+.kv dt{color:var(--muted);font-size:.85rem}
+.kv dd{margin:0}
+.copy{font:inherit;font-size:.78rem;border:1px solid var(--line);background:none;color:var(--muted);border-radius:4px;padding:2px 8px;cursor:pointer}
+.links{list-style:none;padding:0;margin:0}
+.links li{padding-block:10px;border-bottom:1px solid var(--line)}
+.links li:last-child{border-bottom:0}
+.links span{display:block;font-size:.85rem;color:var(--muted)}
+
+footer{border-top:1px solid var(--line);padding-block:28px;font-size:.82rem;color:var(--muted);line-height:1.7}
+
+@media (max-width:820px){
+  .hero{grid-template-columns:1fr;gap:32px;padding-block:36px}
+  .sec-head{grid-template-columns:1fr;gap:4px}
+  .body{margin-left:0}
+  .facts,.fields{grid-template-columns:1fr}
+  .facts div{border-right:0;border-bottom:1px solid var(--line)}
+  .facts div:last-child{border-bottom:0}
+  .lic,.contact{grid-template-columns:1fr}
+  .flow{grid-template-columns:1fr 1fr;row-gap:12px}
+  .subnav{display:none}
+  .dates li{grid-template-columns:1fr;gap:0}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header class="top">
+    <div class="brand" id="brand"></div>
+    <nav class="switch" aria-label="切換學制">
+      <a href="#top" id="sw-main" aria-current="page">五專｜國中畢業</a>
+      <a href="#inservice" id="sw-in">二專在職專班｜社會人士</a>
+    </nav>
+  </header>
+
+<!-- ================= 五專視圖 ================= -->
+<main id="view-main">
+  <nav class="subnav" aria-label="頁面導覽">
+    <a href="#routes">入學管道</a><a href="#why">為什麼是視光</a><a href="#results">國考與起薪</a><a href="#courses">課程地圖</a><a href="#future">未來發展</a><a href="#faq">常見問題</a><a href="#contact">聯絡我們</a>
+  </nav>
+
+  <div class="hero hero-img" id="top">
+    <div class="hero-text">
+      <p class="eyebrow">五專升學指南 · 給國中生、家長與輔導老師</p>
+      <h1 style="margin-top:12px">看清楚<br>你的<em>下一步</em></h1>
+      <p class="lead">國中畢業可以讀高中、高職，也可以直接念五專。這裡把五專的入學管道、時程與比序重點一次整理好，也介紹一個很多人還不認識的醫事專業：讓人「看得見、看得清楚、看得舒服」的視光學科。</p>
+      <div class="roles" aria-label="依身分閱讀">
+        <a href="#student">我是國中生</a>
+        <a href="#parent">我是家長</a>
+        <a href="#teacher">我是輔導老師</a>
+        <a href="#inservice" class="alt">我已經在工作 →</a>
+      </div>
+    </div>
+    <img src="hero.webp" width="1536" height="1024" alt="插畫：驗光師為學生檢查眼睛，照顧人員陪伴長者使用平板">
+  </div>
+
+  <section id="what">
+    <div class="sec-head">
+      <p class="eyebrow">01 · 認識五專</p>
+      <div><h2>五年一貫，國中畢業就開始學專業</h2>
+      <p>五專是「五年制專科學校」。前段兼顧國英數等共同科目，同時就開始上專業課；馬偕視光的四年級整年在校外實習，五年級回校做專題與統整。畢業取得副學士學位，可以直接報考驗光師。</p></div>
+    </div>
+    <div class="body">
+      <div class="facts">
+        <div><b class="num">5 年</b><span>國中畢業直升，中間不用再考一次大學入學</span></div>
+        <div><b>副學士</b><span>畢業學位；可接著讀二技取得學士</span></div>
+        <div><b>1 整年實習</b><span>四年級全年校外實習，提早進入職場</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="routes">
+    <div class="sec-head">
+      <p class="eyebrow">02 · 入學管道與時程</p>
+      <div><h2>一年有好幾次機會，順序很重要</h2>
+      <p>想讀五專，主要有三個免試管道，依時間先後是完全免試、優先免試、聯合免試。點選下面的管道，看它的重點、比序方式和日程；最後有一張比較表。</p></div>
+    </div>
+    <div class="body">
+      <p class="banner"><b>日程為 115 學年度、比序方式依 113 學年度簡章整理，供參考。</b>116 學年度（2027 年入學）簡章通常在 1 月中公告，公告後本頁會更新。</p>
+
+      <div class="rsteps" role="tablist" aria-label="選擇入學管道">
+        <button type="button" role="tab" id="rt-full" aria-controls="rp-full" aria-selected="true" data-route="full"><span class="num">4–5 月</span><b>完全免試</b><small>會考前</small></button>
+        <div class="rexam" aria-hidden="true"><span class="num">5 月中</span><b>國中教育會考</b></div>
+        <button type="button" role="tab" id="rt-prio" aria-controls="rp-prio" aria-selected="false" data-route="prio"><span class="num">5–6 月</span><b>優先免試</b><small>會考後</small></button>
+        <button type="button" role="tab" id="rt-joint" aria-controls="rp-joint" aria-selected="false" data-route="joint"><span class="num">6–7 月</span><b>聯合免試</b><small>優免之後</small></button>
+      </div>
+
+      <!-- 完全免試 -->
+      <div class="rpanel" role="tabpanel" id="rp-full" aria-labelledby="rt-full">
+        <h3>五專完全免試入學（單獨招生）<span class="tag no">不看會考</span></h3>
+        <ul class="keys">
+          <li>全國<b>不分區</b>，由各校辦理單獨招生。</li>
+          <li><b>完全不採計</b>國中教育會考成績。</li>
+          <li>僅限國中<b>應屆</b>畢業生，由就讀國中統一<b>集體報名</b>。</li>
+          <li>每位學生<b>只能選 1 個</b>學校科組。</li>
+        </ul>
+        <div class="quota"><span>馬偕視光 115 學年度完全免試名額</span><b class="num" id="q115"></b><span id="q116"></span></div>
+
+        <h4>馬偕的比序方式（總積分 48 分）</h4>
+        <div class="tbl"><table>
+          <thead><tr><th>比序項目</th><th>上限</th><th>怎麼計分</th></tr></thead>
+          <tbody>
+            <tr><th>多元學習表現：服務學習</th><td class="num">15</td><td>擔任班級幹部、小老師或社團幹部，滿 1 學期得 2 分（同學期兼任仍以 2 分計）；校內服務學習或校外志工、社區服務，每滿 1 小時得 0.5 分。</td></tr>
+            <tr><th>均衡學習</th><td class="num">28</td><td>健康與體育、藝術、綜合活動、科技四個領域，國中前 5 學期平均成績及格（60 分以上），每個領域得 7 分。</td></tr>
+            <tr><th>其他：自傳</th><td class="num">5</td><td>依自傳評分標準評分，見下方說明。</td></tr>
+          </tbody>
+        </table></div>
+        <p class="small">總積分相同時，依序比較：自傳 → 服務學習的幹部積分 → 服務時數積分 → 均衡學習。113 學年度積分採計至 4 月 30 日，115 學年度為 4 月 27 日。</p>
+
+        <details class="inner"><summary>自傳怎麼寫？（占 5 分，也是同分時第一個比的項目）</summary><div class="a">
+          <div class="tbl"><table>
+            <thead><tr><th>段落</th><th>字數</th><th>比重</th><th>寫什麼</th></tr></thead>
+            <tbody>
+              <tr><th>一、家庭背景</th><td>約 150 字內</td><td class="num">20%</td><td>個人成長環境、家庭簡介。</td></tr>
+              <tr><th>二、求學過程</th><td>約 250 字內</td><td class="num">35%</td><td>國中學習上的收穫、專業上的提升，例如檢定、競賽、非修課紀錄之學習、特殊優良表現（有證明文件請附上）。</td></tr>
+              <tr><th>三、參加活動</th><td>約 200 字內</td><td class="num">25%</td><td>社團、打工、大專技職活動等經驗（有證明文件請附上）。</td></tr>
+              <tr><th>四、對未來期望</th><td>約 200 字內</td><td class="num">20%</td><td>升學或就業計畫，對未來的期望或展望。</td></tr>
+            </tbody>
+          </table></div>
+          <p>格式：800 字以內、12 號字、分四段書寫、每段之間空一行，標題寫「○○○（姓名）自傳」，A4 列印。</p>
+        </div></details>
+
+        <h4>重要日程（115 學年度）</h4>
+        <ul class="dates">
+          <li><span>4/27</span><span>比序積分採計截止</span></li>
+          <li><span>4/28 – 5/4</span><span>國中學校集體報名</span></li>
+          <li><span>5/14</span><span>錄取公告</span></li>
+          <li><span>5/18 – 6/11</span><span>各校辦理報到（依各校規定）</span></li>
+          <li><span>6/15 12:00</span><span>報到後放棄錄取資格截止</span></li>
+        </ul>
+      </div>
+
+      <!-- 優先免試 -->
+      <div class="rpanel" role="tabpanel" id="rp-prio" aria-labelledby="rt-prio" hidden>
+        <h3>五專優先免試入學<span class="tag no">馬偕視光不看會考</span></h3>
+        <ul class="keys">
+          <li>全國<b>不分區</b>招生，網路選填志願、統一分發，<b>最多 30 個</b>志願，不限地區、學校、科組。</li>
+          <li>應屆、非應屆畢業生及具同等學力者都可以報名：應屆生可國中集體報名或個別網路報名；非應屆或同等學力者採個別網路報名。</li>
+          <li><b>馬偕只有護理科採計會考</b>；視光學科、幼兒保育科、餐飲管理科、化妝品應用與管理科、生命關懷事業科、人工智慧暨醫療應用科、智慧科技長期照顧科<b>都不採計會考</b>。</li>
+        </ul>
+        <div class="quota"><span>馬偕視光 113 學年度優先免試名額</span><b class="num">65 名</b><span>｜志願代碼 60205（113 學年度）</span></div>
+
+        <h4>視光學科適用的比序方式（不採計會考，總積分 68 分）</h4>
+        <div class="tbl"><table>
+          <thead><tr><th>比序項目</th><th>上限</th><th>怎麼計分</th></tr></thead>
+          <tbody>
+            <tr><th>志願序</th><td class="num">26</td><td>第 1–5 志願 26 分、第 6–10 志願 25 分、第 11–15 志願 24 分、第 16–20 志願 23 分、第 21–25 志願 22 分、第 26–30 志願 21 分。</td></tr>
+            <tr><th>多元學習表現</th><td class="num">15</td><td>競賽（上限 7）與服務學習（上限 15）合計最多 15 分，計分方式見下方。</td></tr>
+            <tr><th>技藝優良</th><td class="num">3</td><td>技藝教育課程單一學期百分制成績擇優採計：90 分以上 3 分、80–89 分 2.5 分、70–79 分 1.5 分、60–69 分 1 分。</td></tr>
+            <tr><th>弱勢身分</th><td class="num">3</td><td>低收入戶 3 分；中低收入戶、直系血親尊親屬支領失業給付之子女、特殊境遇家庭子女 1.5 分（多項擇一）。</td></tr>
+            <tr><th>均衡學習</th><td class="num">21</td><td>健康與體育、藝術、綜合活動、科技領域，七上至九上共 5 學期平均成績 60 分以上，每個領域 7 分，上限 21 分。</td></tr>
+          </tbody>
+        </table></div>
+        <p class="small">護理科另外採計國中教育會考（國英數自社，A++ 6.4 分、A+ 6 分、A 5 分、B++ 4 分、B+ 3 分、B 2 分、C 1 分，上限 32 分）與寫作測驗（6 級分 1 分至 1 級分 0.1 分，上限 1 分），總積分 101 分。</p>
+
+        <details class="inner"><summary>多元學習表現：競賽與服務學習怎麼算？</summary><div class="a">
+          <div class="tbl"><table>
+            <thead><tr><th>競賽類型</th><th>第一名</th><th>第二名</th><th>第三名</th><th>第四至六名</th></tr></thead>
+            <tbody>
+              <tr><th>國際性競賽</th><td class="num">7</td><td class="num">6</td><td class="num">5</td><td>—</td></tr>
+              <tr><th>全國性競賽</th><td class="num">6</td><td class="num">5</td><td class="num">4</td><td class="num">3</td></tr>
+              <tr><th>區域及縣市競賽</th><td class="num">3</td><td class="num">2</td><td class="num">1</td><td>—</td></tr>
+            </tbody>
+          </table></div>
+          <p>競賽上限 7 分，同學年度同項競賽擇優 1 次採計；國際性、全國性競賽以簡章所列為限；區域及縣市競賽以縣市政府主辦者為限；4 人以上為團體賽，依個人賽積分折半計算。</p>
+          <p>服務學習上限 15 分：班級幹部、小老師、社團幹部滿 1 學期得 2 分（同學期兼任仍以 2 分計，副級幹部只採計副班長、副社長）；校內服務學習或校外志工、社區服務每 1 小時得 0.25 分。沒有幹部經歷的同學，服務時數達 60 小時也能拿滿分。</p>
+        </div></details>
+
+        <details class="inner"><summary>總積分相同時怎麼比？</summary><div class="a">
+          <p>不論是否採計會考，同分比序順序都相同：總積分 → 均衡學習 → 技藝優良 → 志願序 → 弱勢身分 → 多元學習表現 → 會考＋寫作 → 服務學習 → 競賽 → 國文 → 數學 → 英文 → 自然 → 社會 → 寫作測驗。</p>
+        </div></details>
+
+        <h4>重要日程（115 學年度）</h4>
+        <ul class="dates">
+          <li><span>5/18 – 5/22</span><span>國中集體報名（個別網路報名 5/19 起）</span></li>
+          <li><span>6/4 – 6/8</span><span>網路選填志願（正式版）</span></li>
+          <li><span>6/11</span><span>錄取公告</span></li>
+          <li><span>6/15 12:00</span><span>報到及放棄錄取資格截止</span></li>
+        </ul>
+        <p class="note"><b>重要提醒：</b>高中職各就學區的優先免試和五專優先免試可以同時報名，但兩邊都錄取時只能擇一報到。五專優先免試錄取並報到後，若沒有在期限內放棄錄取資格，就不能再報名北、中、南區五專聯合免試及免試續招。</p>
+      </div>
+
+      <!-- 聯合免試 -->
+      <div class="rpanel" role="tabpanel" id="rp-joint" aria-labelledby="rt-joint" hidden>
+        <h3>五專聯合免試入學<span class="tag yes">採計會考</span></h3>
+        <ul class="keys">
+          <li>分<b>北、中、南三區</b>辦理，每一區<b>限報名 1 所</b>五專（一區一校）。</li>
+          <li>在優先免試之後辦理，優先免試沒錄取的同學還能再參加一次。</li>
+          <li>錄取方式都是<b>現場登記分發報到</b>，三區在<b>同一天</b>辦理。</li>
+          <li>聯合免試<b>各科都採計會考</b>成績。</li>
+        </ul>
+        <div class="quota"><span>馬偕視光 113 學年度聯合免試名額</span><b class="num">5 名</b><span>｜學校代碼 602（北區）</span></div>
+
+        <h4>馬偕的比序方式（原始 50 分，加權後 64 分）</h4>
+        <div class="tbl"><table>
+          <thead><tr><th>比序項目</th><th>上限</th><th>馬偕加權</th><th>怎麼計分</th></tr></thead>
+          <tbody>
+            <tr><th>多元學習表現</th><td class="num">16</td><td class="num">×1.5 = 24</td><td>競賽（上限 7）、服務學習（上限 7）、日常生活表現評量（上限 4）、體適能（上限 6）合計最多 16 分，計分方式見下方。</td></tr>
+            <tr><th>國中教育會考</th><td class="num">15</td><td class="num">×1.4 = 21</td><td>國文、數學、英語、自然、社會，每科精熟 A 3 分、基礎 B 2 分、待加強 C 1 分（不採計寫作）。</td></tr>
+            <tr><th>均衡學習</th><td class="num">6</td><td class="num">×1 = 6</td><td>健康與體育、藝術、綜合活動、科技領域，七上至九上 5 學期平均 60 分以上，每個領域 2 分，上限 6 分。</td></tr>
+            <tr><th>其他：英語能力檢定</th><td class="num">5</td><td class="num">×1 = 5</td><td>馬偕自訂項目，對照表見下方。</td></tr>
+            <tr><th>技藝優良</th><td class="num">3</td><td class="num">×1 = 3</td><td>技藝教育課程單一學期百分制成績擇優採計：90 分以上 3 分、80–89 分 2 分、60–79 分 1 分。</td></tr>
+            <tr><th>適性輔導</th><td class="num">3</td><td class="num">×1 = 3</td><td>《生涯發展規劃書》中家長、導師、輔導教師三者意見：3 者都勾選五專 3 分、2 者 2 分、1 者 1 分。非應屆畢業生以 3 分計。</td></tr>
+            <tr><th>弱勢身分</th><td class="num">2</td><td class="num">×1 = 2</td><td>低收入戶、中低收入戶、直系血親尊親屬支領失業給付之子女或特殊境遇家庭子女，符合其中一種得 2 分。</td></tr>
+          </tbody>
+        </table></div>
+        <p class="small">輔導老師請留意：「適性輔導」看的是《生涯發展規劃書》裡家長、導師、輔導教師的勾選，三方都勾選五專才有滿分 3 分。</p>
+
+        <details class="inner"><summary>多元學習表現：競賽、服務學習、日常生活、體適能怎麼算？</summary><div class="a">
+          <p><b>競賽（上限 7）：</b>計分表與優先免試相同（國際性第一名 7 分、全國性第一名 6 分、區域及縣市第一名 3 分⋯），同學年度同項競賽擇優 1 次；4 人以上為團體賽，積分折半。</p>
+          <p><b>服務學習（上限 7）：</b>班級幹部、小老師、社團幹部滿 1 學期得 1 分（同學期兼任仍以 1 分計，副級幹部只採計副班長、副社長）；校內服務學習或校外志工、社區服務每 8 小時得 1 分。沒有幹部經歷的同學，服務時數達 56 小時也能拿滿分。</p>
+          <div class="tbl"><table>
+            <thead><tr><th>日常生活表現評量（上限 4）</th><th>積分</th></tr></thead>
+            <tbody>
+              <tr><td>無小過以上處分，獎懲相抵後得 1 次大功（含）以上</td><td class="num">4</td></tr>
+              <tr><td>無小過以上處分，獎懲相抵後得 1 次小功（含）以上</td><td class="num">3</td></tr>
+              <tr><td>無小過以上處分，獎懲相抵後得 1 次嘉獎（含）以上</td><td class="num">2</td></tr>
+              <tr><td>獎懲相抵後無任何懲處紀錄</td><td class="num">1</td></tr>
+            </tbody>
+          </table></div>
+          <p><b>體適能（上限 6）：</b>肌耐力、柔軟度、瞬發力、心肺耐力中，3 項達標準 6 分、2 項 4 分、1 項 2 分。門檻為教育部體育署規定的中等（PR25）以上；經鑑定為身心障礙學生、領有身心障礙證明，或持公立醫院證明為重大傷病、體弱者，比照 3 項達標得 6 分。體適能成績須擇一次檢測完整使用。</p>
+        </div></details>
+
+        <details class="inner"><summary>英語能力檢定怎麼換算？</summary><div class="a">
+          <div class="tbl"><table>
+            <thead><tr><th>全民英檢 GEPT</th><th>托福 ITP</th><th>托福 iBT</th><th>多益 TOEIC</th><th>雅思 IELTS</th><th>積分</th></tr></thead>
+            <tbody>
+              <tr><td>中級複試（含）以上及格</td><td class="num">500</td><td class="num">61</td><td class="num">650</td><td class="num">5.0</td><td class="num">5</td></tr>
+              <tr><td>中級初試及格</td><td class="num">450</td><td class="num">45</td><td class="num">400</td><td class="num">3.5</td><td class="num">4</td></tr>
+              <tr><td>初級複試及格</td><td class="num">390</td><td class="num">29</td><td class="num">300</td><td class="num">3.0</td><td class="num">3</td></tr>
+              <tr><td>初級初試及格</td><td>—</td><td>—</td><td class="num">120</td><td>—</td><td class="num">2</td></tr>
+            </tbody>
+          </table></div>
+        </div></details>
+
+        <details class="inner"><summary>總積分相同時怎麼比？</summary><div class="a">
+          <p>聯合免試的同分比序由各校自訂：先比主項目（多元學習表現、技藝優良、弱勢身分、均衡學習、適性輔導、其他），再比多元學習表現的分項目（競賽、服務學習、日常生活表現評量、體適能），接著比會考五科，最後依會考「3 等級 4 標示」與寫作測驗。馬偕的確切順序以當年度簡章公告為準。</p>
+        </div></details>
+
+        <h4>重要日程（115 學年度北區）</h4>
+        <ul class="dates">
+          <li><span>6/18 – 6/25</span><span>國中集體通訊報名、個別網路與通訊報名</span></li>
+          <li><span>7/3</span><span>各校寄發成績暨現場登記分發報到通知單</span></li>
+          <li><span>7/6 17:00 前</span><span>確認是否收到通知單，沒收到請向招生學校查詢</span></li>
+          <li><span>7/8</span><span>現場登記分發報到</span></li>
+          <li><span>7/13 12:00</span><span>放棄錄取資格截止</span></li>
+        </ul>
+        <p class="note"><b>重要提醒：</b>高中職各就學區免試入學和各區五專聯合免試可以同時報名，但兩邊都錄取時只能擇一報到。也可以同時報名多區的五專聯合免試，但三區現場登記分發在同一天，而且要帶學歷（力）證件正本，所以同時被多區通知時，只能選一所學校參加現場登記分發。</p>
+        <p class="small">聯合免試之後仍有名額的學校，可經教育部核准辦理免試續招（約 7–8 月，各校另行公告）。</p>
+      </div>
+
+      <p class="note"><b>報到前要想清楚：</b>任一管道錄取並報到後，如果還想參加之後的高中職或五專招生，必須在期限內辦理「放棄錄取資格」，而且一經辦理不能撤回。</p>
+
+      <h3 class="cmp-title">三種管道比一比</h3>
+      <div class="tbl">
+        <table class="cmp">
+          <thead><tr><th></th><th>完全免試</th><th>優先免試</th><th>聯合免試</th></tr></thead>
+          <tbody>
+            <tr><th>辦理時間</th><td>會考前（4–5 月）</td><td>會考後（5–6 月）</td><td>優先免試後（6–7 月）</td></tr>
+            <tr><th>招生範圍</th><td>全國不分區，各校單獨招生</td><td>全國不分區</td><td>分北、中、南三區</td></tr>
+            <tr><th>誰可以報名</th><td>國中應屆畢業生</td><td>應屆、非應屆及同等學力者</td><td>應屆、非應屆畢業生</td></tr>
+            <tr><th>可選幾個</th><td>1 個學校科組</td><td>最多 30 個志願</td><td>每區限報 1 所，可報多區，但分發同一天只能擇一</td></tr>
+            <tr><th>報名方式</th><td>國中集體報名</td><td>國中集體或個別網路報名</td><td>國中集體或個別報名</td></tr>
+            <tr><th>馬偕視光名額</th><td class="num">40 名（115）</td><td class="num">65 名（113）</td><td class="num">5 名（113）</td></tr>
+            <tr><th>錄取方式</th><td>各校依比序錄取</td><td>網路選填、統一分發</td><td>現場登記分發</td></tr>
+            <tr><th>會考成績（馬偕視光）</th><td>不採計</td><td>不採計（馬偕僅護理科採計）</td><td>採計（各科皆採計，馬偕加權 ×1.4）</td></tr>
+            <tr><th>比序重點（馬偕視光）</th><td>服務學習、均衡學習、自傳（48 分）</td><td>志願序、多元學習表現、技藝優良、弱勢身分、均衡學習（68 分）</td><td>多元學習表現 ×1.5、會考 ×1.4、均衡學習、英語檢定、技藝優良、適性輔導、弱勢身分（加權後 64 分）</td></tr>
+            <tr><th>適合誰</th><td>已經確定想讀這一科、想早點定位</td><td>想多比較幾個校科，把真心想讀的填前面</td><td>前面管道沒錄取，或想再爭取一次</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="src"><b>資料來源（第三方資料）：</b>技專校院招生委員會聯合會 115 學年度五專完全免試、優先免試、北區聯合免試招生重要日程表；比序方式與馬偕名額依 113 學年度招生簡章及馬偕專校招生說明資料整理。各年度規定以當年度簡章公告為準。</p>
+
+      <div class="quiz">
+        <h3>30 秒找到你適合先準備的管道</h3>
+        <div class="q"><p>1. 你對「讀五專視光」的確定程度？</p>
+          <div class="opts" data-q="sure">
+            <button type="button" data-v="yes" aria-pressed="true">很確定，就是它</button>
+            <button type="button" data-v="maybe" aria-pressed="false">有興趣，但還在比較</button>
+          </div></div>
+        <div class="q"><p>2. 你希望什麼時候確定學校？</p>
+          <div class="opts" data-q="time">
+            <button type="button" data-v="early" aria-pressed="true">越早越好，會考前就想定下來</button>
+            <button type="button" data-v="later" aria-pressed="false">會考後再比較、再決定</button>
+          </div></div>
+        <div class="result" id="quizResult" aria-live="polite"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="why">
+    <div class="sec-head">
+      <p class="eyebrow">03 · 為什麼是視光</p>
+      <div><h2>視光不是「賣眼鏡」，是有國家證照的醫事專業</h2>
+      <p>2016 年《驗光人員法》公布後，替民眾驗光、配鏡與配隱形眼鏡都要由通過國家考試的驗光人員執行。視光學科學的是眼睛構造、光學、驗光技術、雙眼視覺與隱形眼鏡，以醫學為基礎，光學只是其中一部分。</p></div>
+    </div>
+    <div class="body">
+      <div class="lic">
+        <div><h3>驗光師<small>專技高考</small></h3>
+          <p>專科以上學校驗光或視光科系畢業、實習期滿成績及格即可報考。<b>五專視光學科畢業就符合資格</b>，不必先讀完大學。</p></div>
+        <div><h3>驗光生<small>專技普考</small></h3>
+          <p>高級醫事職業以上學校相關科系畢業可報考，業務範圍較驗光師窄。考試辦理方式依考選部公告為準。</p></div>
+      </div>
+      <div class="fields">
+        <div><h3>驗光所・眼鏡專業門市</h3><p>驗光、配鏡、隱形眼鏡配戴與衛教</p></div>
+        <div><h3>眼科診所・醫院</h3><p>協助屈光檢查與視功能評估</p></div>
+        <div><h3>鏡片・隱形眼鏡產業</h3><p>產品研發、教育訓練、專業業務</p></div>
+        <div><h3>近視防控・學童視力</h3><p>學童近視管理與視力保健推廣</p></div>
+        <div><h3>高齡與低視力服務</h3><p>老花、低視力輔具的評估與教導使用</p></div>
+        <div><h3>AI 與智慧視覺科技</h3><p>眼動追蹤、智慧眼鏡、視覺檢測軟體</p></div>
+      </div>
+      <p class="src"><b>資料來源（第三方資料）：</b>《驗光人員法》（中華民國 105 年 1 月 6 日公布）第 1、2、12 條。</p>
+    </div>
+  </section>
+
+  <section id="results">
+    <div class="sec-head">
+      <p class="eyebrow">04 · 國考與起薪</p>
+      <div><h2>考得上，也找得到工作</h2>
+      <p>家長最常問的兩件事：畢業後考不考得上證照、出社會薪水多少。薪資可以依證照與職場類型自己篩選比較。</p></div>
+    </div>
+    <div class="body" style="display:grid;gap:28px">
+      <div class="chartbox" data-chart="fiveYr">
+        <div class="chart-top">
+          <h3>本校五專畢業生 驗光人員考取率</h3>
+          <div class="seg" role="group" aria-label="選擇考試">
+            <button type="button" data-exam="opt" aria-pressed="true">驗光師</button>
+            <button type="button" data-exam="tech" aria-pressed="false">驗光生</button>
+          </div>
+        </div>
+        <div class="legend"><span><i style="background:var(--ai)"></i>本校五專</span><span><i style="background:var(--nat)"></i>全國平均</span></div>
+        <div class="svgwrap"></div>
+        <p class="headline"></p>
+        <p class="src"><b>本校數據：</b>馬偕專校視光學科統計。<b>全國平均（第三方資料）：</b>考選部專門職業及技術人員考試驗光人員及格率。橫軸為考試年度（民國年）。</p>
+      </div>
+
+      <div data-salary></div>
+    </div>
+  </section>
+
+  <section id="courses">
+    <div class="sec-head">
+      <p class="eyebrow">05 · 課程地圖</p>
+      <div><h2>五年怎麼學：認識 → 專業 → 實習 → 整合</h2>
+      <p>每一年都搭配後期中等教育課程與博雅通識課程；上方為國考核心科目，虛線以下為其他專業課程。</p></div>
+    </div>
+    <div class="body">
+      <div class="cmap" id="map5"></div>
+      <p class="src"><b>資料來源：</b>馬偕專校視光學科「五專課程地圖」。實際開課依學校公告為準。</p>
+    </div>
+  </section>
+
+  <section id="future">
+    <div class="sec-head">
+      <p class="eyebrow">06 · 未來發展</p>
+      <div><h2>從五專出發，路可以一直往上接</h2>
+      <p>畢業後可以先就業、先考照，也可以繼續升學；兩條路不衝突，很多人邊工作邊進修。</p></div>
+    </div>
+    <div class="body">
+      <div class="flow">
+        <div><span class="yr num">15 歲</span><h3>五專視光</h3><p>五年完成專業養成與實習</p></div>
+        <div><span class="yr num">20 歲</span><h3>驗光師國考・就業</h3><p>畢業即可報考，取得執業資格</p></div>
+        <div><span class="yr num">+2 年</span><h3>二技視光系</h3><p>取得學士，可日間或在職就讀</p></div>
+        <div><span class="yr num">+2 年起</span><h3>碩士・博士</h3><p>視覺科學、醫學工程、AI 應用；或出國進修</p></div>
+      </div>
+      <div class="shortcut">
+        <p class="eyebrow">捷徑</p>
+        <h3>拿到驗光師證書，就能直接報考碩士班</h3>
+        <p>驗光師屬於專門職業及技術人員高等考試。取得高考及格證書者，可以「同等學力」報考大學碩士班，不必先讀完二技或大學。</p>
+        <div class="sc-flow"><span>五專視光</span><span>驗光師高考及格</span><span>碩士班</span></div>
+        <p class="small">另一條路：五年制專科畢業、離校滿三年以上，也可以同等學力報考碩士班。各校系可能另訂工作年資或加修學分規定，報考前請查該校簡章。</p>
+        <p class="src"><b>資料來源（第三方資料）：</b>教育部《入學大學同等學力認定標準》第五條第五款（專門職業及技術人員高等考試及格）、第四款（專科學校畢業離校年數）。</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="sec-head">
+      <p class="eyebrow">07 · 常見問題</p>
+      <div><h2>依你的身分，先看最常被問的問題</h2></div>
+    </div>
+    <div class="body">
+      <div class="tabs" role="tablist" aria-label="選擇身分">
+        <button role="tab" id="tab-student" aria-selected="true" aria-controls="p-student" data-role="student">國中生</button>
+        <button role="tab" id="tab-parent" aria-selected="false" aria-controls="p-parent" data-role="parent">家長</button>
+        <button role="tab" id="tab-teacher" aria-selected="false" aria-controls="p-teacher" data-role="teacher">輔導老師</button>
+      </div>
+      <div role="tabpanel" id="p-student" aria-labelledby="tab-student">
+        <details open><summary>我數理不太好，可以讀視光嗎？</summary><div class="a"><p>可以。一年級有「視光應用數學」與「幾何光學」從基礎教起，老師也會用實物、模擬器和實驗帶你理解。比起很會算，更重要的是細心、願意動手練習，以及喜歡跟人說話。</p></div></details>
+        <details><summary>我自己有戴眼鏡，會影響嗎？</summary><div class="a"><p>不會。很多驗光師自己就有戴眼鏡，戴著眼鏡或隱形眼鏡操作儀器都沒問題，而且你會更懂病人的感受。</p></div></details>
+        <details><summary>上課都在做什麼？</summary><div class="a"><p>二、三年級是專業課的主體：視光學、配鏡學、隱形眼鏡學都有對應的實驗課，你會親手操作驗光儀器、幫人挑選與調整眼鏡。四年級整年到校外實習，五年級回校做專題與統整。</p></div></details>
+        <details><summary>完全免試只能選一個，要怎麼決定？</summary><div class="a"><p>如果你已經很確定想讀視光，完全免試可以讓你在會考前就定位。如果還在比較，可以先留意學校公開的校園參訪日或體驗日，再搭配會考後的優先免試，最多能填 30 個志願。</p></div></details>
+        <details><summary>視光和護理差在哪裡？</summary><div class="a"><p>兩個都是醫事人員。護理師照顧病人整體的健康，多在醫院輪班；驗光師專注在眼睛與視覺，做視力檢查、配眼鏡與隱形眼鏡，工作場所以驗光所、眼鏡門市和眼科診所為主。</p></div></details>
+        <details><summary>前三年還要讀國英數嗎？</summary><div class="a"><p>要。五專每一年都有後期中等教育課程與博雅通識，同時也從一年級就開始上解剖生理學、視光常用術語與概論等專業課，兩邊一起並進。</p></div></details>
+        <details><summary>四年級的校外實習在做什麼？</summary><div class="a"><p>四年級整年到校外實習單位，在職場實際操作驗光、配鏡與服務顧客，把前三年學的東西用在真實的人身上。實習單位依學校安排。</p></div></details>
+        <details><summary>我的會考成績普通，還有機會嗎？</summary><div class="a"><p>有。完全免試入學完全不看會考成績；馬偕視光學科在優先免試也不採計會考，看的是志願序、多元學習表現、均衡學習等。把服務學習、均衡學習等紀錄顧好，對每個管道都有幫助。</p></div></details>
+        <details><summary>我對 AI、科技比較有興趣，跟視光有關嗎？</summary><div class="a"><p>很有關。智慧眼鏡、眼動追蹤、視覺檢測軟體都需要懂眼睛與視覺的人；學校也會把 AI 與數位工具帶進課堂。喜歡科技的你，在視光可以找到發揮的地方。</p></div></details>
+        <details><summary>想先多了解一點，可以怎麼做？</summary><div class="a"><p>可以追蹤我們的 Instagram「睛來馬偕｜視光情報所」，並留意學校公開的校園參訪日期或體驗日。到馬偕專校首頁點「想唸馬偕來問我」加入 LINE 大群，在大群的記事本裡找到視光學科專群加入，活動消息都會在那裡公告。</p></div></details>
+      </div>
+      <div role="tabpanel" id="p-parent" aria-labelledby="tab-parent" hidden>
+        <p class="panel-lead">家長最關心三件事：讀完能不能繼續升學、找不找得到工作、十年後還有沒有前景。</p>
+        <div class="pgrid">
+          <article class="pc"><p class="eyebrow">升學</p><h3>五專不是終點，往上接得很順</h3>
+            <ul>
+              <li>畢業取得副學士，可接二技（約 2 年取得學士），或插班大學。</li>
+              <li>考取驗光師後，可依《入學大學同等學力認定標準》以同等學力直接報考碩士班，不必先讀完大學。</li>
+              <li>五專畢業、離校滿三年，也可以同等學力報考碩士班。</li>
+            </ul>
+            <a class="go" href="#future">看升學路線 →</a></article>
+          <article class="pc"><p class="eyebrow">就業</p><h3>有國家證照，工作有保障</h3>
+            <ul>
+              <li>驗光師是第 15 類醫事人員，依法執行驗光業務須具驗光人員證照。</li>
+              <li>本校五專畢業生歷年驗光師考取率都高於全國平均。</li>
+              <li>職場包括驗光所與眼鏡門市、眼科診所與醫院、鏡片與隱形眼鏡公司、儀器公司。</li>
+              <li>依 1111 職缺刊登，同一職場中有證照的起薪明顯高於無證照。</li>
+            </ul>
+            <a class="go" href="#results">看考取率與起薪 →</a></article>
+          <article class="pc"><p class="eyebrow">未來發展</p><h3>需求跟著社會一起成長</h3>
+            <ul>
+              <li>高齡化帶來老花、低視力等視覺照護需求；學童近視防控也需要專業人員。</li>
+              <li>AI、智慧眼鏡、眼動追蹤等新科技，都需要真正懂眼睛與視覺的人才。</li>
+              <li>累積年資後，可往門市主管、驗光所負責人、產業研發、教學與研究發展。</li>
+            </ul>
+            <a class="go" href="#why">看職場類型 →</a></article>
+        </div>
+        <details><summary>讀視光是不是以後就在眼鏡行賣眼鏡？</summary><div class="a"><p>驗光師是依《驗光人員法》管理的醫事人員，工作核心是專業的視力檢查與矯正。除了專業門市與驗光所，也能到眼科診所、鏡片與隱形眼鏡公司、研發單位，或繼續升學走研究與教學。</p></div></details>
+        <details><summary>會不會被 AI 取代？</summary><div class="a"><p>儀器與 AI 能幫忙量測，但判斷檢查結果、配合生活需求調整處方、跟病人溝通與衛教，仍需要專業人員。學校也把 AI 與數位工具帶進課堂，讓學生學會用 AI 把工作做得更好。</p></div></details>
+        <details><summary>學費與補助怎麼查？</summary><div class="a"><p>五專前三年依教育部相關規定有學費補助，後兩年依各校收費標準及補助資格辦理。最新金額請以學校招生簡章公告為準，也歡迎直接聯絡我們。</p></div></details>
+        <details><summary>讀五專好，還是讀高中再考大學好？</summary><div class="a"><p>各有適合的孩子。五專提早進入專業，畢業時約 20 歲就能報考驗光師證照；高中則保留比較多選擇的時間。如果孩子已經對醫療或視光有興趣，五專能讓他早一步定位，之後仍能接二技、插大或以證照報考碩士。</p></div></details>
+        <details><summary>孩子還不確定自己的興趣，適合讀嗎？</summary><div class="a"><p>建議留意學校公開的校園參訪日期或體驗日，帶孩子實際看看、問問學長姐，再決定。活動消息可以從馬偕專校首頁的「想唸馬偕來問我」LINE 大群，找到視光學科專群取得。完全免試只能選一個校科，還在比較的話，可以考慮會考後的優先免試，最多能填 30 個志願。</p></div></details>
+        <details><summary>驗光師和驗光生有什麼不同？</summary><div class="a"><p>兩者都是依《驗光人員法》管理的驗光人員。驗光師屬專技高考，報考資格為專科以上視光相關科系畢業，業務範圍較廣；驗光生屬專技普考，業務範圍較窄。五專視光畢業即可報考驗光師。</p></div></details>
+        <details><summary>如果畢業時沒考上證照怎麼辦？</summary><div class="a"><p>可以繼續準備、再次報考。期間也能先以視光科系畢業的身分就業，不過依 1111 職缺刊登，無證照的起薪明顯低於有證照者，所以我們的課程以國考科目為核心，協助學生在畢業時就考取。</p></div></details>
+        <details><summary>工作時間大概是怎樣？</summary><div class="a"><p>依職場而不同。眼鏡門市與驗光所多為排班制，依 1111 職缺刊登，常見月休約 9–10 天；眼科診所則依門診時段，可能有早、午、晚診的班別。</p></div></details>
+        <details><summary>什麼樣的孩子適合讀視光？</summary><div class="a"><p>細心、願意反覆練習操作，喜歡跟人說話、願意為人服務的孩子都很適合。對光學、科技或醫療有好奇心，會是加分。戴眼鏡完全不影響。</p></div></details>
+        <details><summary>以後可以自己開業嗎？</summary><div class="a"><p>可以。驗光人員可以依法開設驗光所，但要怎麼準備，會依開業的方向與規模而不同。歡迎直接用頁面下方的聯絡方式與我們聯繫，我們可以依孩子的規劃一起討論。</p></div></details>
+        <p class="src"><b>資料來源：</b>馬偕專校招生簡章「學校及各招生科簡介」；《入學大學同等學力認定標準》第五條（第三方資料）；起薪依 1111 人力銀行職缺刊登（第三方資料）。</p>
+      </div>
+      <div role="tabpanel" id="p-teacher" aria-labelledby="tab-teacher" hidden>
+        <p class="panel-lead">學生說想走醫療，第一個想到的常常是護理。其實醫事人員不只護理師一種，在馬偕，還有兩條不同性格的學生也適合的醫療相關路線。</p>
+        <div class="pgrid">
+          <article class="pc"><p class="eyebrow">護理科</p><h3>護理師</h3>
+            <p>醫事人員，馬偕的招牌科系。適合想在醫院、臨床第一線照顧病人的學生。</p></article>
+          <article class="pc hl"><p class="eyebrow">視光學科</p><h3>驗光師</h3>
+            <p>第 15 類醫事人員。五專畢業、實習及格即可報考驗光師高考，取得後還能以同等學力報考碩士班。</p>
+            <p class="fit"><b>適合：</b>細心、喜歡動手操作儀器、喜歡跟人說話，對光學或科技有好奇心的學生。</p></article>
+          <article class="pc"><p class="eyebrow">智慧科技長期照顧科</p><h3>智慧照顧・泛醫事方向</h3>
+            <p>把物聯網、遠距照護與科技輔具帶進長期照顧，實習場域包括科技公司與長照機構。畢業後可往泛醫事人員（Allied Health）方向發展，也能升讀二技或插班大學。</p>
+            <p class="fit"><b>適合：</b>有耐心、喜歡照顧人，也對科技應用有興趣的學生。</p></article>
+        </div>
+        <p class="small">輔導建議：學生對「醫療」有興趣但不一定適合護理的工作型態時，可以一起討論視光或智慧長照，學校會公開校園參訪日期與體驗日，可以提醒學生透過馬偕專校首頁的「想唸馬偕來問我」LINE 大群取得消息。</p>
+        <details><summary>完全免試的報名流程要注意什麼？</summary><div class="a"><p>限國中應屆畢業生，由國中統一辦理集體報名，每位學生只能報 1 個校科組。115 學年度比序積分採計截止為 4/27，集體報名為 4/28–5/4，請提早協助學生確認服務學習、均衡學習等紀錄。</p></div></details>
+        <details><summary>學生已經錄取並報到，還想參加後面的管道怎麼辦？</summary><div class="a"><p>必須在簡章規定期限前完成「放棄錄取資格」聲明（115 學年度完全免試與優先免試皆為 6/15 中午 12:00），辦理後不得撤回。建議放榜前就先跟學生與家長確認意向。</p></div></details>
+        <details><summary>可以安排視光體驗課或入班宣導嗎？</summary><div class="a"><p>可以。我們有國中技藝教育與生涯發展教育的合作經驗，能帶視力表、透鏡與光學教具到校，讓學生實際體驗立體視覺、色覺與透鏡成像。歡迎用下方聯絡方式洽詢。</p></div></details>
+        <details><summary>官方資料要去哪裡查？</summary><div class="a"><p>招生日程與簡章請以各招生委員會及各校招生專區公告為準；馬偕各科資訊請見學校網站。</p></div></details>
+        <details><summary>會考成績中等、但對視光有興趣的學生，建議走哪個管道？</summary><div class="a"><p>如果學生已經很確定，完全免試入學不採計會考成績，可以提早定位；若還想比較，優先免試最多能填 30 個校科志願，把視光放在前 5 個志願即可；馬偕視光學科在優先免試不採計會考成績，對會考成績中等的學生特別友善。上方「30 秒找到你適合先準備的管道」可以直接帶學生做。</p></div></details>
+        <details><summary>驗光師和眼科醫師、眼鏡行人員有什麼不同？</summary><div class="a"><p>眼科醫師負責眼疾的診斷、治療與手術；驗光師是依《驗光人員法》管理的醫事人員，執行非侵入性的屈光檢查、驗光與配鏡，看到可能的眼疾會轉介給眼科醫師。依法執行驗光業務須具驗光人員證照，這也是視光科系存在的原因。</p></div></details>
+        <details><summary>智慧科技長期照顧科和護理科差在哪？</summary><div class="a"><p>護理科以培育護理師、走臨床照護為主；智慧科技長期照顧科聚焦長期照顧，並把物聯網、遠距照護與科技輔具帶進照顧現場，實習場域包括科技公司與長照機構，畢業後往泛醫事（Allied Health）方向發展。</p></div></details>
+        <details><summary>學生擔心數理不好，該怎麼回應？</summary><div class="a"><p>視光會用到光學與計算，但一年級就有視光應用數學與幾何光學，從基礎開始教。比起數理成績，細心、願意動手練習和溝通能力更重要。</p></div></details>
+        <details><summary>視光學生畢業後的升學管道有哪些？</summary><div class="a"><p>可升讀二技或插班大學；考取驗光師後，可依《入學大學同等學力認定標準》第五條第五款以同等學力報考碩士班；五專畢業離校滿三年也可依同條第四款報考。</p></div></details>
+        <details><summary>家長對五專有疑慮時，可以怎麼說明？</summary><div class="a"><p>可以請家長看「家長」分頁，我們把升學、就業、未來發展整理成三張卡片，並附上考取率與起薪的資料來源；也可以請家長加入馬偕專校首頁的「想唸馬偕來問我」LINE 大群，在記事本找到視光學科專群，留意公開的校園參訪日與體驗日。</p></div></details>
+        <p class="src"><b>資料來源：</b>馬偕專校招生簡章「學校及各招生科簡介」；《驗光人員法》（第三方資料）。</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ================= 在職專班視圖 ================= -->
+<main id="view-inservice" class="inservice" hidden>
+  <div class="hero">
+    <div>
+      <p class="eyebrow">二專進修部在職專班 · 給已經在工作的你</p>
+      <h1 style="margin-top:12px">把現場經驗<br>變成<em style="color:var(--green)">一張證照</em></h1>
+      <p class="lead">已經在眼鏡門市、驗光所或相關產業工作，但還沒有驗光人員證照？在職專班用三年、六個學期，把你在現場學到的經驗補上完整的專業知識與實習，畢業取得副學士，就能報考驗光師。</p>
+      <div class="roles">
+        <a href="#in-courses" class="alt">看課程地圖</a>
+        <a href="#in-results" class="alt">看考取率</a>
+        <a href="#in-contact" class="alt">報名諮詢</a>
+      </div>
+    </div>
+    <figure class="chart-va" aria-label="在職專班六學期節奏">
+      <div class="row"><span class="va">一上</span><span class="opt" style="font-size:1.25rem;letter-spacing:.05em">專業基礎</span></div>
+      <div class="row"><span class="va">一下</span><span class="opt" style="font-size:1.25rem;letter-spacing:.05em">專業技能</span></div>
+      <div class="row"><span class="va">二上</span><span class="opt" style="font-size:1.25rem;letter-spacing:.05em">專業技能</span></div>
+      <div class="row"><span class="va">二下</span><span class="opt" style="font-size:1.25rem;letter-spacing:.05em">校外實習</span></div>
+      <div class="row"><span class="va">三上</span><span class="opt" style="font-size:1.25rem;letter-spacing:.05em">校外實習</span></div>
+      <div class="row"><span class="va">三下</span><span class="opt" style="font-size:1.25rem;letter-spacing:.05em;color:var(--green)">回校衝刺國考</span></div>
+      <figcaption>三年六學期的學習節奏，畢業當年就能報考驗光師。</figcaption>
+    </figure>
+  </div>
+
+  <section id="in-what">
+    <div class="sec-head">
+      <p class="eyebrow">01 · 認識在職專班</p>
+      <div><h2>為工作中的人設計的三年學制</h2>
+      <p>在職專班屬於二專進修部，透過單獨招生入學。課程從眼球生理、視光學、配鏡學一路到技術整合，中間安排兩個學期的校外實習。報考資格與上課時段依當年度招生簡章規定。</p></div>
+    </div>
+    <div class="body">
+      <div class="facts">
+        <div><b class="num">3 年</b><span>六個學期，含兩學期校外實習</span></div>
+        <div><b>副學士</b><span>畢業學位；可再接二技、研究所</span></div>
+        <div><b>驗光師</b><span>專科畢業、實習及格即可報考</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="in-results">
+    <div class="sec-head">
+      <p class="eyebrow">02 · 國考成績</p>
+      <div><h2>在職同學一樣考得上</h2>
+      <p>很多在職同學不是理工背景、離開校園也很久了，一樣能考取驗光人員證照。</p></div>
+    </div>
+    <div class="body">
+      <div class="chartbox" data-chart="inService">
+        <div class="chart-top">
+          <h3>本校在職專班畢業生 驗光人員考取率</h3>
+          <div class="seg" role="group" aria-label="選擇考試">
+            <button type="button" data-exam="opt" aria-pressed="true">驗光師</button>
+            <button type="button" data-exam="tech" aria-pressed="false">驗光生</button>
+          </div>
+        </div>
+        <div class="legend"><span><i style="background:var(--green)"></i>本校在職專班</span><span><i style="background:var(--nat)"></i>全國平均</span></div>
+        <div class="svgwrap"></div>
+        <p class="headline"></p>
+        <p class="src"><b>本校數據：</b>馬偕專校視光學科統計。<b>全國平均（第三方資料）：</b>考選部專門職業及技術人員考試驗光人員及格率。橫軸為考試年度（民國年）。</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="in-courses">
+    <div class="sec-head">
+      <p class="eyebrow">03 · 課程地圖</p>
+      <div><h2>三年怎麼學：專業 → 實習 → 整合</h2>
+      <p>上方為國考核心科目，虛線以下為其他課程。</p></div>
+    </div>
+    <div class="body">
+      <div class="cmap" id="mapIn"></div>
+      <p class="src"><b>資料來源：</b>馬偕專校視光學科「二專在職專班課程地圖」。實際開課依學校公告為準。</p>
+    </div>
+  </section>
+
+  <section id="in-salary">
+    <div class="sec-head">
+      <p class="eyebrow">04 · 取得證照之後</p>
+      <div><h2>證照讓經驗被看見</h2>
+      <p>驗光人員法施行後，執行驗光業務須具驗光人員資格。同一家公司，有證照和沒證照的起薪就不一樣，下面可以自己篩選比較。</p></div>
+    </div>
+    <div class="body">
+      <div data-salary></div>
+    </div>
+  </section>
+
+  <section id="in-faq">
+    <div class="sec-head">
+      <p class="eyebrow">05 · 常見問題</p>
+      <div><h2>在職同學最常問的問題</h2></div>
+    </div>
+    <div class="body">
+      <details open><summary>我不是理工背景，數學和物理都忘了，跟得上嗎？</summary><div class="a"><p>跟得上。課程從眼球生理、視光學、配鏡學等基礎科目循序漸進，國考會用到的屈光度、透鏡計算都會在專業課裡從頭教起，實驗課也會帶著實際操作。過去也有許多非理工背景的在職同學順利考取證照。</p></div></details>
+      <details><summary>一邊上班一邊上課，時間怎麼安排？</summary><div class="a"><p>在職專班是為工作中的人開設的學制，上課時段與學期安排請以當年度招生簡章公告為準，建議報名前詳閱簡章。</p></div></details>
+      <details><summary>校外實習要離開原本的工作嗎？</summary><div class="a"><p>依課程地圖，校外實習安排在二年級下學期與三年級上學期。實習相關規定以當年度招生簡章公告為主，建議報名前詳閱簡章。</p></div></details>
+      <details><summary>畢業後可以做什麼？</summary><div class="a"><p>取得副學士後可報考驗光師；也可以繼續就讀二技視光系取得學士。取得驗光師證書後，依《入學大學同等學力認定標準》第五條第五款（第三方資料），還能以同等學力直接報考碩士班。</p></div></details>
+      <details><summary>報名資格與時間去哪裡看？</summary><div class="a"><p>二專進修部在職專班為單獨招生，報考資格、名額、甄選方式與日程以馬偕專校招生專區公告的當年度簡章為準。</p></div></details>
+    </div>
+  </section>
+
+  <section id="in-contact">
+    <div class="sec-head">
+      <p class="eyebrow">06 · 報名諮詢</p>
+      <div><h2>不確定自己適不適合？先聊聊</h2>
+      <p>工作年資、學歷、上課時間、實習安排，都可以先問清楚再決定。</p></div>
+    </div>
+    <div class="body contact" data-contact></div>
+  </section>
+</main>
+
+  <section id="contact" data-main-only>
+    <div class="sec-head">
+      <p class="eyebrow">08 · 聯絡我們</p>
+      <div><h2>想更了解視光？先加入視光學科專群</h2>
+      <p>校園參訪與體驗活動以學校公開的日期為主，消息都會在 LINE 群組公告。</p></div>
+    </div>
+    <div class="body">
+      <ol class="joinsteps">
+        <li><b>打開馬偕專校首頁</b><span>網址 www.mkc.edu.tw</span></li>
+        <li><b>點右側「想唸馬偕來問我」</b><span>九年級國中生及家長 LINE 社群</span></li>
+        <li><b>加入大群後打開「記事本」</b><span>找到視光學科專群的連結</span></li>
+        <li><b>加入視光學科專群</b><span>校園參訪日、體驗日等消息都在這裡公告</span></li>
+      </ol>
+      <p class="small" style="margin-bottom:24px">實驗室不開放個別預約參觀，想來看看請把握學校公開的參訪與體驗日期。</p>
+    </div>
+    <div class="body contact" data-contact></div>
+  </section>
+
+  <footer id="foot"></footer>
+</div>
+
+<script>
+/* ===== 可修改的設定 ===== */
+const CONFIG = {
+  school: "馬偕醫護管理專科學校",
+  dept: "視光學科",
+  contactName: "李冠緯",
+  contactRole: "視光學科 專任講師｜驗光師・招生窗口",
+  phone: "02-2858-4180 分機 2415",
+  email: "s674@mail.mkc.edu.tw",
+  address: "112 臺北市北投區聖景路 92 號",
+  copyright: "馬偕醫護管理專科學校 視光學科",
+  updated: "2026 年 11 月",
+  deptUrl: "https://web.mkc.edu.tw/Site/optometry/",
+  instagram: "https://www.instagram.com/recruit.mkcopt/",
+  salaryDate: "2026 年 11 月 9 日",
+  quota115: 40,          // 115 學年度五專完全免試名額
+  quota116: null         // 116 學年度名額，公告後填入數字
+};
+
+/* 考取率（%）：年度為民國年；null 表示無資料 */
+const PASS = {
+  years: [106,107,108,109,110,111,112,113,114,115],
+  opt: {   // 驗光師
+    national:  [27.34,10.98,17.17,19.68,34.26,29.17,24.91,22.66,27.09,23.46],
+    fiveYr:    [null,44.00,44.00,58.00,85.00,62.16,63.93,68.00,56.52,64.71],
+    inService: [null,14.28,23.08,21.79,43.53,38.77,50.00,30.77,55.56,65.22]
+  },
+  tech: {  // 驗光生
+    national:  [47.46,17.95,23.54,26.88,31.25,32.43,25.85,28.52,22.86,26.94],
+    fiveYr:    [null,73.00,88.00,69.00,86.00,76.83,80.00,67.35,72.09,79.17],
+    inService: [null,19.05,36.13,41.89,52.87,42.22,54.17,45.16,54.17,72.22]
+  }
+};
+
+
+const MAP5 = [
+  {stage:"認識科系", y:"一年級", core:["解剖生理學","視光常用術語與概論","視光應用數學","幾何光學"], other:["門市服務技能檢定（丙級）","視光產業概論","職涯規劃：風險與創業","鏡框設計與材質概論"]},
+  {stage:"專業課程", y:"二年級", core:["眼球生理學（一）","視光學（一、二）","視光學實驗（一、二）","網膜鏡檢影學與技術（一、二）","配鏡學（一、二）","配鏡學實驗（一、二）","隱形眼鏡學（一、二）","隱形眼鏡學實驗（一、二）","基礎光學","鏡片光學"], other:["視光文學與文化"]},
+  {stage:"專業課程", y:"三年級", core:["眼球生理學（二）","視光學（三、四）","視光學實驗（三、四）","配鏡學（三、四）","配鏡學實驗（三、四）","隱形眼鏡學（三）","隱形眼鏡學實驗（三）","視光臨床評估與處理","眼鏡光學","眼疾病學","低視力概論","低視力實驗","視光職場法律"], other:["美學與流行文化","視光檢查常用英文","手工鏡框製作"]},
+  {stage:"臨床實習", y:"四年級", intern:true},
+  {stage:"反思整合", y:"五年級", core:["視覺與知覺","眼視光專題與個案討論","視光學技術整合","配鏡專題與個案討論","配鏡學技術整合","隱形眼鏡專題與個案討論","隱形眼鏡技術整合","視覺光學","眼鏡光學技術整合","眼疾病學技術整合","低視力學","低視力技術整合","驗光倫理與法規"], other:["視光常用藥物概論","期刊論文導讀","視光行銷與管理實務"]}
+];
+const MAPIN = [
+  {stage:"專業課程", y:"一年級上學期", core:["眼球生理學","視光學（一）","視光學實驗（一）","配鏡學（一）","配鏡學實驗（一）","鏡片光學"], other:["視光流行文化"]},
+  {stage:"專業課程", y:"一年級下學期", core:["視光學（二）","視光學實驗（二）","網膜鏡檢影學與技術","配鏡學（二）","配鏡學實驗（二）","隱形眼鏡學（一）","隱形眼鏡學實驗（一）","眼鏡光學"], other:["視光文學與文化","視光檢查常用英文"]},
+  {stage:"專業課程", y:"二年級上學期", core:["視光學（三）","視光學實驗（三）","配鏡專題與個案討論","隱形眼鏡學（二）","隱形眼鏡學實驗（二）","眼疾病學","低視力學"], other:[]},
+  {stage:"臨床實習", y:"二下・三上", intern:true},
+  {stage:"反思整合", y:"三年級下學期", core:["視覺與知覺","視光學技術整合","配鏡學技術整合","隱形眼鏡技術整合","眼鏡光學技術整合","低視力技術整合","驗光倫理法規"], other:["一般選修通識課程"]}
+];
+
+/* ===== 基本資料帶入 ===== */
+document.getElementById("brand").innerHTML = CONFIG.school + " <span>· " + CONFIG.dept + "</span>";
+document.getElementById("q115").textContent = CONFIG.quota115 + " 名";
+document.getElementById("q116").textContent = CONFIG.quota116 ? "｜116 學年度 " + CONFIG.quota116 + " 名" : "｜116 學年度尚未公告";
+document.getElementById("foot").textContent = "© " + CONFIG.copyright + "　｜　資料整理於 " + CONFIG.updated + "。標示「第三方資料」者引自政府機關、招生委員會或人力銀行等外部來源，招生日程與名額以官方簡章公告為準。";
+
+document.querySelectorAll("[data-contact]").forEach(box => {
+  const card = document.createElement("div"); card.className = "card";
+  card.innerHTML = '<p class="eyebrow"></p><p class="name"></p><p class="role"></p><dl class="kv"></dl>';
+  card.querySelector(".eyebrow").textContent = CONFIG.school + " " + CONFIG.dept;
+  card.querySelector(".name").textContent = CONFIG.contactName + " 老師";
+  card.querySelector(".role").textContent = CONFIG.contactRole;
+  const kv = card.querySelector(".kv");
+  [["電話", CONFIG.phone], ["Email", CONFIG.email], ["地址", CONFIG.address]].forEach(([k, v]) => {
+    const dt = document.createElement("dt"); dt.textContent = k;
+    const dd = document.createElement("dd"); dd.textContent = v;
+    const b = document.createElement("button"); b.className = "copy"; b.type = "button"; b.textContent = "複製";
+    b.addEventListener("click", () => {
+      const done = () => { b.textContent = "已複製"; setTimeout(() => b.textContent = "複製", 1500); };
+      const sel = () => { const r = document.createRange(); r.selectNodeContents(dd); const s = getSelection(); s.removeAllRanges(); s.addRange(r); b.textContent = "已選取"; };
+      try { navigator.clipboard.writeText(v).then(done, sel); } catch (e) { sel(); }
+    });
+    kv.append(dt, dd, b);
+  });
+  const links = document.createElement("ul"); links.className = "links";
+  links.innerHTML =
+    '<li><a href="https://www.mkc.edu.tw" target="_blank" rel="noopener">馬偕專校首頁</a><span>「想唸馬偕來問我」LINE 大群入口</span></li>' +
+    '<li><a href="' + CONFIG.deptUrl + '" target="_blank" rel="noopener">馬偕視光學科 首頁</a><span>科系介紹、招生資訊</span></li>' +
+    '<li><a href="' + CONFIG.instagram + '" target="_blank" rel="noopener">睛來馬偕｜視光情報所</a><span>馬偕視光招生帳號，活動與日常</span></li>';
+  box.append(card, links);
+});
+
+/* ===== 課程地圖 ===== */
+function renderMap(el, data) {
+  el.innerHTML = "";
+  data.forEach(c => {
+    const col = document.createElement("article"); col.className = "col" + (c.intern ? " intern" : "");
+    const h = document.createElement("header");
+    h.innerHTML = "<small></small><b></b>"; h.querySelector("small").textContent = c.stage; h.querySelector("b").textContent = c.y;
+    col.append(h);
+    if (c.intern) { const d = document.createElement("div"); d.className = "big"; d.textContent = "校外實習"; col.append(d); }
+    else {
+      const g = document.createElement("p"); g.className = "grp"; g.textContent = "國考核心科目"; col.append(g);
+      const ul = document.createElement("ul"); c.core.forEach(t => { const li = document.createElement("li"); li.textContent = t; ul.append(li); }); col.append(ul);
+      const ul2 = document.createElement("ul"); ul2.className = "other";
+      if (c.other.length) c.other.forEach(t => { const li = document.createElement("li"); li.textContent = t; ul2.append(li); });
+      col.append(ul2);
+    }
+    el.append(col);
+  });
+}
+renderMap(document.getElementById("map5"), MAP5);
+renderMap(document.getElementById("mapIn"), MAPIN);
+
+/* ===== 薪資過濾器：1111 人力銀行職缺刊登薪資（長格式，一筆 = 一家雇主 × 一種證照） =====
+   min = 刊登起薪；max = 刊登上限（null 表示只寫「以上」）
+   資料擷取日：見 CONFIG.salaryDate                                                       */
+const JOBS = [
+  // 眼鏡行（眼鏡連鎖與獨立眼鏡行）
+  {emp:"寶Ｏ眼鏡（雙北門市，含區域津貼）", type:"store", tier:"opt",  min:46000, max:70000, note:"前 12 個月保障 50,000"},
+  {emp:"寶Ｏ眼鏡（雙北門市，含區域津貼）", type:"store", tier:"tech", min:44000, max:65000, note:"前 12 個月保障 48,000"},
+  {emp:"寶Ｏ眼鏡（雙北門市，含區域津貼）", type:"store", tier:"none", min:39000, max:60000, note:"視光科系應屆，保障 43,000"},
+  {emp:"寶Ｏ眼鏡（其他縣市門市）", type:"store", tier:"opt",  min:44000, max:70000, note:"前 12 個月保障 48,000"},
+  {emp:"寶Ｏ眼鏡（其他縣市門市）", type:"store", tier:"tech", min:42000, max:65000, note:"前 12 個月保障 46,000"},
+  {emp:"寶Ｏ眼鏡（其他縣市門市）", type:"store", tier:"none", min:37500, max:60000, note:"視光科系應屆，保障 41,500"},
+  {emp:"小Ｏ眼鏡", type:"store", tier:"opt",  min:44000, max:80000, note:"含津貼及獎金"},
+  {emp:"小Ｏ眼鏡", type:"store", tier:"tech", min:42000, max:80000, note:"含津貼及獎金"},
+  {emp:"小Ｏ眼鏡", type:"store", tier:"none", min:34000, max:50000, note:"視光科系畢業"},
+  {emp:"紐Ｏ平方隱形眼鏡行", type:"store", tier:"opt",  min:45000, max:70000, note:"前 12 個月保障 49,000"},
+  {emp:"紐Ｏ平方隱形眼鏡行", type:"store", tier:"tech", min:43000, max:65000, note:"前 12 個月保障 47,000"},
+  {emp:"紐Ｏ平方隱形眼鏡行", type:"store", tier:"none", min:38500, max:60000, note:"視光科系應屆，保障 42,500"},
+  {emp:"雪Ｏ專業眼鏡", type:"store", tier:"opt",  min:43000, max:60000, note:""},
+  {emp:"雪Ｏ專業眼鏡", type:"store", tier:"tech", min:41000, max:60000, note:""},
+  {emp:"SOＯOMAX 快時尚眼鏡", type:"store", tier:"opt", min:48000, max:null, note:"職務、所長津貼另計"},
+  {emp:"好Ｏ眼鏡行", type:"store", tier:"opt", min:50000, max:68000, note:"需 1 年以上經驗"},
+  {emp:"禾Ｏ眼鏡行", type:"store", tier:"opt",  min:43000, max:null, note:""},
+  {emp:"禾Ｏ眼鏡行", type:"store", tier:"tech", min:40000, max:40000, note:""},
+  // 驗光所
+  {emp:"總Ｏ企業（驗光所所長）", type:"clinic", tier:"opt",  min:55000, max:70000, note:"管理職；刊登未區分師／生"},
+  {emp:"總Ｏ企業（驗光所所長）", type:"clinic", tier:"tech", min:55000, max:70000, note:"管理職；刊登未區分師／生"},
+  // 外商（1111 標示為外商之雇主）
+  {emp:"JＯNS 台灣Ｏ姿（北部部分門市）", type:"foreign", tier:"opt",  min:50000, max:null, note:"含證照津貼 10,000"},
+  {emp:"JＯNS 台灣Ｏ姿（北部部分門市）", type:"foreign", tier:"tech", min:48000, max:null, note:"含證照津貼 8,000"},
+  {emp:"JＯNS 台灣Ｏ姿（北部部分門市）", type:"foreign", tier:"none", min:40000, max:null, note:"視光科系畢業"},
+  {emp:"JＯNS 台灣Ｏ姿（其他地區門市）", type:"foreign", tier:"opt",  min:48000, max:null, note:"含證照津貼 10,000"},
+  {emp:"JＯNS 台灣Ｏ姿（其他地區門市）", type:"foreign", tier:"tech", min:46000, max:null, note:"含證照津貼 8,000"},
+  {emp:"JＯNS 台灣Ｏ姿（其他地區門市）", type:"foreign", tier:"none", min:38000, max:null, note:"視光科系畢業"},
+  // 眼科診所・醫院
+  {emp:"大Ｏ眼科診所（藍Ｏ仕、幸福大Ｏ）", type:"eye", tier:"opt",  min:43000, max:50000, note:""},
+  {emp:"大Ｏ眼科診所（藍Ｏ仕、幸福大Ｏ）", type:"eye", tier:"tech", min:41000, max:48000, note:""},
+  {emp:"Ｏ學眼科診所（多家分院）", type:"eye", tier:"opt",  min:30000, max:50000, note:"需驗光師／生證照；依分院而異"},
+  {emp:"Ｏ學眼科診所（多家分院）", type:"eye", tier:"tech", min:30000, max:50000, note:"需驗光師／生證照；依分院而異"},
+  {emp:"合Ｏ眼科診所", type:"eye", tier:"opt",  min:36000, max:50000, note:"需 1 年以上經驗"},
+  {emp:"合Ｏ眼科診所", type:"eye", tier:"tech", min:36000, max:50000, note:"需 1 年以上經驗"},
+  {emp:"官Ｏ眼科診所", type:"eye", tier:"opt",  min:32000, max:null, note:"須具證照；夜診／假日津貼另計"},
+  {emp:"官Ｏ眼科診所", type:"eye", tier:"tech", min:32000, max:null, note:"須具證照；夜診／假日津貼另計"},
+  {emp:"靖Ｏ眼科診所", type:"eye", tier:"opt", min:38000, max:null, note:""},
+  {emp:"明Ｏ眼科診所", type:"eye", tier:"opt", min:35000, max:40000, note:"應屆可"},
+  {emp:"Ｏ醫眼科診所", type:"eye", tier:"opt", min:35000, max:null, note:"需 1 年以上經驗"},
+  {emp:"德Ｏ眼科診所", type:"eye", tier:"opt",  min:31000, max:null, note:"歡迎應屆"},
+  {emp:"德Ｏ眼科診所", type:"eye", tier:"tech", min:31000, max:null, note:"歡迎應屆"},
+  {emp:"新Ｏ紀眼科診所", type:"eye", tier:"tech", min:33000, max:40000, note:""},
+  {emp:"佑Ｏ醫院（眼科門診）", type:"eye", tier:"opt", min:33500, max:40000, note:""}
+];
+const TIERS = {opt:"驗光師", tech:"驗光生", none:"無證照"};
+const TYPES = {all:"全部職場", store:"眼鏡行", clinic:"驗光所", eye:"眼科診所・醫院", foreign:"外商"};
+const TIER_CLS = {opt:"t1", tech:"t2", none:"t3"};
+const TIER_COLOR = {opt:"var(--ai)", tech:"var(--green)", none:"var(--nat)"};
+const median = a => { if (!a.length) return null; const b = [...a].sort((x, y) => x - y), m = b.length >> 1; return b.length % 2 ? b[m] : (b[m - 1] + b[m]) / 2; };
+const money = v => "$" + Math.round(v).toLocaleString();
+
+document.querySelectorAll("[data-salary]").forEach((root, idx) => {
+  root.className = "chartbox salary";
+  const st = { tier: "all", type: "all" };
+  const btns = (group, map, withAll) => Object.entries(withAll ? {all: "全部", ...map} : map)
+    .map(([k, v]) => `<button type="button" data-${group}="${k}" aria-pressed="${k === "all"}">${v}</button>`).join("");
+  root.innerHTML = `
+    <h3>驗光人員起薪比較</h3>
+    <p class="small" style="margin-top:4px">依 1111 人力銀行實際刊登的職缺整理，可依證照與職場類型篩選。</p>
+    <div class="filters">
+      <div class="frow"><span>證照</span><div class="seg" role="group" aria-label="篩選證照">${btns("tier", TIERS, true)}</div></div>
+      <div class="frow"><span>職場</span><div class="seg" role="group" aria-label="篩選職場">${btns("type", {store:TYPES.store, clinic:TYPES.clinic, eye:TYPES.eye, foreign:TYPES.foreign}, true)}</div></div>
+    </div>
+    <div class="tierbars"></div>
+    <p class="headline"></p>
+    <div class="jobs"></div>
+    <p class="src"><b>資料來源（第三方資料）：</b>1111 人力銀行「驗光師」職類及相關關鍵字搜尋結果之職缺刊登薪資，${CONFIG.salaryDate} 擷取。起薪取刊登的最低月薪，多數含津貼或獎金；同一雇主多家分店條件相同者合併為一筆。「外商」依 1111 雇主標示。這是當日刊登中職缺的樣本，不是全體薪資統計，實際薪資依地區、年資與績效而異。</p>`;
+
+  const draw = () => {
+    const inType = j => st.type === "all" || j.type === st.type;
+    // 依證照比較（固定顯示三種證照，套用職場篩選）
+    const max = 60000;
+    root.querySelector(".tierbars").innerHTML = Object.keys(TIERS).map(t => {
+      const m = median(JOBS.filter(j => inType(j) && j.tier === t).map(j => j.min));
+      const dim = st.tier !== "all" && st.tier !== t;
+      return `<div class="tb${dim ? " dim" : ""}"><span>${TIERS[t]}</span>
+        <div class="track"><div class="fill" style="width:${m ? m / max * 100 : 0}%;background:${TIER_COLOR[t]}"></div></div>
+        <span class="v">${m ? money(m) : "無資料"}</span></div>`;
+    }).join("");
+
+    const rows = JOBS.filter(j => inType(j) && (st.tier === "all" || j.tier === st.tier));
+    const mins = rows.map(j => j.min);
+    const typeName = st.type === "all" ? "所有職場" : TYPES[st.type];
+    const tierName = st.tier === "all" ? "所有證照" : TIERS[st.tier];
+    const lic = median(JOBS.filter(j => inType(j) && j.tier === "opt").map(j => j.min));
+    const none = median(JOBS.filter(j => inType(j) && j.tier === "none").map(j => j.min));
+    let head = rows.length
+      ? `${typeName}・${tierName}：共 <b class="num">${rows.length}</b> 筆，起薪中位數 <b class="num">${money(median(mins))}</b>。`
+      : `${typeName}・${tierName}：目前沒有符合的職缺刊登。`;
+    if (lic && none) head += ` 同職場中，驗光師比無證照的起薪中位數多約 <b class="num">${money(lic - none)}</b>。`;
+    if (st.type === "clinic") head += ` 1111 上以「驗光所」名義刊登的職缺很少；許多連鎖眼鏡門市本身就依法登記為驗光所，可一併參考「眼鏡行」。`;
+    root.querySelector(".headline").innerHTML = head;
+
+    const LO = 25000, HI = 85000, pos = v => (Math.min(Math.max(v, LO), HI) - LO) / (HI - LO) * 100;
+    rows.sort((a, b) => b.min - a.min);
+    root.querySelector(".jobs").innerHTML = rows.length ? rows.map(j => {
+      const right = j.max ? pos(j.max) : Math.min(pos(j.min) + 12, 100);
+      const w = Math.max(right - pos(j.min), 1.2);
+      const label = j.max && j.max !== j.min ? `${money(j.min)}–${money(j.max)}` : j.max ? money(j.min) : `${money(j.min)} 以上`;
+      return `<div class="job"><div class="emp"><b></b><small>${TYPES[j.type]}${j.note ? "・" : ""}</small></div>
+        <span class="chip ${TIER_CLS[j.tier]}">${TIERS[j.tier]}</span>
+        <div class="rng" aria-label="${label}"><div class="ax"></div>
+          <div class="sbar${j.max ? "" : " open"}" style="left:${pos(j.min)}%;width:${w}%"></div>
+          <span class="lab" style="left:0">${label}</span></div></div>`;
+    }).join("") : `<p class="empty">沒有符合條件的職缺，請放寬篩選條件。</p>`;
+    // 雇主名稱與備註用 textContent 填入
+    root.querySelectorAll(".job").forEach((el, i) => {
+      el.querySelector(".emp b").textContent = rows[i].emp;
+      el.querySelector(".emp small").textContent = TYPES[rows[i].type] + (rows[i].note ? "・" + rows[i].note : "");
+    });
+    root.querySelectorAll("[data-tier]").forEach(b => b.setAttribute("aria-pressed", b.dataset.tier === st.tier));
+    root.querySelectorAll("[data-type]").forEach(b => b.setAttribute("aria-pressed", b.dataset.type === st.type));
+  };
+  root.addEventListener("click", e => {
+    const b = e.target.closest("button"); if (!b) return;
+    if (b.dataset.tier) st.tier = b.dataset.tier;
+    if (b.dataset.type) st.type = b.dataset.type;
+    draw();
+  });
+  draw();
+});
+
+/* ===== 考取率折線圖 ===== */
+function lineChart(series, color) {
+  const W = 640, H = 280, L = 44, R = 16, T = 16, B = 32;
+  const xs = PASS.years, n = xs.length;
+  const x = i => L + (W - L - R) * i / (n - 1);
+  const y = v => T + (H - T - B) * (1 - v / 100);
+  let s = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="考取率折線圖">`;
+  [0, 20, 40, 60, 80, 100].forEach(g => {
+    s += `<line x1="${L}" x2="${W - R}" y1="${y(g)}" y2="${y(g)}" stroke="var(--line)" stroke-width="1"/>`;
+    s += `<text x="${L - 8}" y="${y(g) + 4}" text-anchor="end">${g}%</text>`;
+  });
+  xs.forEach((yr, i) => { s += `<text x="${x(i)}" y="${H - 10}" text-anchor="middle">${yr}</text>`; });
+  const path = (arr) => { let d = "", pen = false; arr.forEach((v, i) => { if (v == null) { pen = false; return; } d += (pen ? "L" : "M") + x(i).toFixed(1) + " " + y(v).toFixed(1) + " "; pen = true; }); return d; };
+  const nat = series.national, mine = series.mine;
+  s += `<path d="${path(nat)}" fill="none" stroke="var(--nat)" stroke-width="2" stroke-dasharray="5 4"/>`;
+  s += `<path d="${path(mine)}" fill="none" stroke="${color}" stroke-width="2.5" stroke-linejoin="round"/>`;
+  mine.forEach((v, i) => { if (v == null) return;
+    const last = i === n - 1;
+    s += `<circle cx="${x(i)}" cy="${y(v)}" r="${last ? 5 : 3.2}" fill="${last ? color : "var(--paper)"}" stroke="${color}" stroke-width="2"/>`;
+    s += `<text class="lbl" x="${x(i)}" y="${y(v) - 10}" text-anchor="middle" style="fill:${color}">${v.toFixed(1)}</text>`;
+  });
+  nat.forEach((v, i) => { if (v == null) return;
+    s += `<circle cx="${x(i)}" cy="${y(v)}" r="2.5" fill="var(--nat)"/>`;
+    s += `<text x="${x(i)}" y="${y(v) + 16}" text-anchor="middle">${v.toFixed(1)}</text>`;
+  });
+  return s + "</svg>";
+}
+document.querySelectorAll("[data-chart]").forEach(box => {
+  const key = box.dataset.chart;
+  const color = key === "fiveYr" ? "var(--ai)" : "var(--green)";
+  const who = key === "fiveYr" ? "本校五專" : "本校在職專班";
+  const draw = exam => {
+    const d = PASS[exam], mine = d[key];
+    box.querySelector(".svgwrap").innerHTML = lineChart({ national: d.national, mine }, color);
+    const last = mine[mine.length - 1], nat = d.national[d.national.length - 1];
+    const name = exam === "opt" ? "驗光師" : "驗光生";
+    box.querySelector(".headline").innerHTML = `${PASS.years[PASS.years.length - 1]} 年${name}考試：${who} <b class="num">${last.toFixed(2)}%</b>，全國平均 <span class="num">${nat.toFixed(2)}%</span>。`;
+    box.querySelectorAll("[data-exam]").forEach(b => b.setAttribute("aria-pressed", b.dataset.exam === exam));
+  };
+  box.querySelectorAll("[data-exam]").forEach(b => b.addEventListener("click", () => draw(b.dataset.exam)));
+  draw("opt");
+});
+
+/* ===== 身分分頁 ===== */
+function showRole(role) {
+  document.querySelectorAll('.tabs [role="tab"]').forEach(t => {
+    const on = t.dataset.role === role;
+    t.setAttribute("aria-selected", on);
+    document.getElementById(t.getAttribute("aria-controls")).hidden = !on;
+  });
+}
+document.querySelectorAll('.tabs [role="tab"]').forEach(t => t.addEventListener("click", () => showRole(t.dataset.role)));
+
+/* ===== 視圖切換（#inservice 為在職專班） ===== */
+const IN_IDS = ["inservice", "in-what", "in-results", "in-courses", "in-salary", "in-faq", "in-contact"];
+function route() {
+  const h = location.hash.replace("#", "");
+  const isIn = IN_IDS.includes(h);
+  document.getElementById("view-main").hidden = isIn;
+  document.getElementById("view-inservice").hidden = !isIn;
+  document.querySelector("[data-main-only]").hidden = isIn;
+  document.getElementById("sw-main").setAttribute("aria-current", isIn ? "false" : "page");
+  document.getElementById("sw-in").setAttribute("aria-current", isIn ? "page" : "false");
+  let target = null;
+  if (["student", "parent", "teacher"].includes(h)) { showRole(h); target = document.getElementById("faq"); }
+  else if (h && h !== "inservice" && h !== "top") target = document.getElementById(h);
+  if (target) requestAnimationFrame(() => target.scrollIntoView());
+  else window.scrollTo(0, 0);
+}
+window.addEventListener("hashchange", route);
+route();
+
+/* ===== 入學管道切換 ===== */
+document.querySelectorAll(".rsteps [data-route]").forEach(b => b.addEventListener("click", () => {
+  document.querySelectorAll(".rsteps [data-route]").forEach(x => {
+    const on = x === b;
+    x.setAttribute("aria-selected", on);
+    document.getElementById(x.getAttribute("aria-controls")).hidden = !on;
+  });
+}));
+
+/* ===== 管道小測驗 ===== */
+const state = { sure: "yes", time: "early" };
+const results = {
+  "yes-early": "<b>建議先準備：五專完全免試入學。</b>會考前就能確定學校，只能選 1 個校科，所以請確認是真心想讀。現在開始把服務學習、均衡學習等紀錄整理好，並留意積分採計截止日。",
+  "yes-later": "<b>建議先準備：五專優先免試入學。</b>會考後網路選填志願，把最想讀的科別放在前 5 個志願，志願序積分最高。馬偕視光在優先免試不採計會考，沒錄取還有北區聯合免試可以再試一次。",
+  "maybe-early": "<b>建議：先參加學校公開的參訪日或體驗日。</b>完全免試只能選一個校科，還在比較時先別急。實際看看、問問學長姐，確定後再決定要不要走完全免試。",
+  "maybe-later": "<b>建議先準備：優先免試＋聯合免試。</b>會考後最多可填 30 個校科志願，給自己比較的空間；趁國三上學期多參加體驗課，找到真正喜歡的科別。"
+};
+function renderQuiz() { document.getElementById("quizResult").innerHTML = results[state.sure + "-" + state.time]; }
+document.querySelectorAll(".opts").forEach(g => g.addEventListener("click", e => {
+  const b = e.target.closest("button"); if (!b) return;
+  state[g.dataset.q] = b.dataset.v;
+  g.querySelectorAll("button").forEach(x => x.setAttribute("aria-pressed", x === b));
+  renderQuiz();
+}));
+renderQuiz();
+</script>
+</body>
+</html>
